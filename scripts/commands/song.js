@@ -29,15 +29,16 @@ async function downloadMusicFromYoutube(link, path) {
   return returnPromise
 }
 module.exports.config = {
-  name: "song", 
-  version: "1.0.0", 
-  permission: 0,
-  credits: "Nayan",
-  description: "example",
-  prefix: true,
-  category: "Media", 
-  usages: "user", 
-  cooldowns: 5,
+    name: "song",
+    version: "1.0.0",
+    hasPermssion: 0,
+    credits: "Islamick Chat",
+    description: "Phát nhạc thông qua link YouTube hoặc từ khoá tìm kiếm",
+    prefix: true,
+    commandCategory: "tiện ích",
+    usages: "[searchMusic]",
+    cooldowns: 0
+};
 
 module.exports.handleReply = async function ({ api, event, handleReply }) {
     const axios = require('axios')
@@ -48,7 +49,7 @@ module.exports.handleReply = async function ({ api, event, handleReply }) {
         if (fs.statSync(path).size > 26214400) return api.sendMessage('The file cannot be sent because the capacity is greater than 25MB.', event.threadID, () => fs.unlinkSync(path), event.messageID);
         api.unsendMessage(handleReply.messageID)
         return api.sendMessage({ 
-		body: `•┄┅════❁🌺❁════┅┄•\n\n📻 Title: ${data.title}\n🎼 Name Channel : ${data.author}\n🕥 Time: ${this.convertHMS(data.dur)}\n👀 Views: ${data.viewCount}\n❤️ Likes: ${data.likes}\n🕘Processing time: ${Math.floor((Date.now()- data.timestart)/1000)} second\n[𝐎𝐖𝐍𝐄𝐑:☞\n𝐒𝐎𝐇𝐀𝐆 𝐊𝐇𝐀𝐍\n\n•┄┅════❁🌺❁════┅┄•\n•—»✨ 𝐏𝐥𝐚𝐲 𝐌𝐮𝐬𝐢𝐜 ✨«—•`,
+		body: `•┄┅════❁🌺❁════┅┄•\n\n📻 Title: ${data.title}\n🎼 Name Channel : ${data.author}\n🕥 Time: ${this.convertHMS(data.dur)}\n👀 Views: ${data.viewCount}\n❤️ Likes: ${data.likes}\n🕘Processing time: ${Math.floor((Date.now()- data.timestart)/1000)} second\n𝐀𝐏𝐈 𝐅𝐫𝐨𝐦\n𝐈𝐬𝐥𝐚𝐦𝐢𝐜𝐤 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭\n\n•┄┅════❁🌺❁════┅┄•\n•—»✨ 𝐏𝐥𝐚𝐲 𝐌𝐮𝐬𝐢𝐜 ✨«—•`,
             attachment: fs.createReadStream(path)}, event.threadID, ()=> fs.unlinkSync(path), 
          event.messageID)
             
