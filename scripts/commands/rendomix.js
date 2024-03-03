@@ -1,4 +1,3 @@
-/** I am doing this coding with a lot of difficulty, please don't post it yourself¯\_(ツ)_/¯ **/
 module.exports.config = {
   name: "rendomix",
   version: "2.0.0",
