@@ -8,7 +8,6 @@ module.exports.config = {
   category: "Screenshot má»™t trang web nÃ o Ä‘Ã³ (NOT ALLOW NSFW PAGE)",
   usages: "[url site]",
   cooldowns: 5,
-};
   dependencies: {
         "fs-extra": "",
         "path": "",
