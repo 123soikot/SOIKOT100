@@ -7,10 +7,10 @@ module.exports.config = {
   version: "2.0.0",
   permission: 0,
   credits: "Nayan",
-  description: "control admin lists",
+  description: "Displays album options for selection.",
   prefix: false,
-  category: "admin",
-  usages: "admin [add/remove] [uid]",
+  category: "Media",
+  usages: "Only or add [cartoon/photo/lofi/sad/islamic/funny/horny/anime/aesthetic/cat/lyrics/love/sigma]",
   cooldowns: 5,
 };
 
