@@ -14,10 +14,10 @@ module.exports.config = {
 
 module.exports.handleEvent = function ({ api, event, client, __GLOBAL }) {
   var { threadID, messageID } = event;
-  if (event.body.indexOf("🌚") === 0) { // Corrected the condition and added a closing bracket
+  if (event.body.indexOf("🍼") === 0) { // Corrected the condition and added a closing bracket
     var msg = {
-      body: "-😊🖤_যে ভালোবাসার সে তোমাকে তোমার মতোই ভালোবাসবে-!!❤️🥀シ😊",
-      attachment: fs.createReadStream(__dirname + `/cache/kosto.mp3`),
+      body: "- এই নাও বাবু পিটার খাও-🍼",
+      attachment: fs.createReadStream(__dirname + `/cache/pidar.mp3`),
     };
     api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("🍼", event.messageID, (err) => {}, true);
