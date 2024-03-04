@@ -1,60 +1,4 @@
 const fs = require('fs');
-const ytdl = require('ytdl-core');
-const { resolve } = require('path');
-async function downloadMusicFromYoutube(link, path) {
-  var timestart = Date.now();
-  if(!link) return 'Thiếu link'
-  var resolveFunc = function () { };
-  var rejectFunc = function () { };
-  var returnPromise = new Promise(function (resolve, reject) {
-    resolveFunc = resolve;
-    rejectFunc = reject;
-  });
-    ytdl(link, {
-            filter: format =>
-                format.quality == 'tiny' && format.audioBitrate == 48 && format.hasAudio == true
-        }).pipe(fs.createWriteStream(path))
-        .on("close", async () => {
-            var data = await ytdl.getInfo(link)
-            var result = {
-                title: data.videoDetails.title,
-                dur: Number(data.videoDetails.lengthSeconds),
-                viewCount: data.videoDetails.viewCount,
-                likes: data.videoDetails.likes,
-                author: data.videoDetails.author.name,
-                timestart: timestart
-            }
-            resolveFunc(result)
-        })
-  return returnPromise
-}
-module.exports.config = {
-	name: "song",
-    version: "1.0.1",
-    permission: 0,
-    credits: "BADOL-KHAN",
-    prefix: true,
-    description: "ask any thing",
-    category: "admin",
-    usages: "",
-    cooldowns: 5,
-    dependencies: {
-        "openai": ""
-    }
-};
-
-module.exports.handleReply = async function ({ api, event, handleReply }) {
-    const axios = require('axios')
-    const { createReadStream, unlinkSync, statSync } = require("fs-extra")
-    try {
-        var path = `${__dirname}/cache/1.mp3`
-        var data = await downloadMusicFromYoutube('https://www.youtube.com/watch?v=' + handleReply.link[event.body -1], path);
-        if (fs.statSync(path).size > 26214400) return api.sendMessage('The file cannot be sent because the capacity is greater than 25MB.', event.threadID, () => fs.unlinkSync(path), event.messageID);
-        api.unsendMessage(handleReply.messageID)
-        return api.sendMessage({ 
-		body: `•┄┅════❁🌺❁════┅┄•\n\n📻 Title: ${data.title}\n🎼 Name Channel : ${data.author}\n🕥 Time: ${this.convertHMS(data.dur)}\n👀 Views: ${data.viewCount}\n❤️ Likes: ${data.likes}\n🕘Processing time: ${Math.floor((Date.now()- data.timestart)/1000)} second\n𝐀𝐏𝐈 𝐅𝐫𝐨𝐦\n𝐈𝐬𝐥𝐚𝐦𝐢𝐜𝐤 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭\n\n•┄┅════❁🌺❁════┅┄•\n•—»✨ 𝐏𝐥𝐚𝐲 𝐌𝐮𝐬𝐢𝐜 ✨«—•`,
-            attachment: fs.createReadStream(path)}, event.threadID, ()=> fs.unlinkSync(path), 
-         event.messageID)
             
     }
     catch (e) { return console.log(e) }
@@ -70,7 +14,7 @@ module.exports.convertHMS = function(value) {
     return (hours != '00' ? hours +':': '') + minutes+':'+seconds;
 }
 module.exports.run = async function ({ api, event, args }) {
-    if (args.length == 0 || !args) return api.sendMessage('•┄┅════❁🌺❁════┅┄•\n\nআসসালামু আলাইকুম-!!🖤💫\nআপনি যেই গান সুনতে চান তার এক বা দুই লাইন নিচে লিখে দিন \n\n•┄┅════❁🌺❁════┅┄•', event.threadID, event.messageID);
+    if (args.length == 0 || !args) return api.sendMessage('» উফফ আবাল কি গান শুনতে চাস তার ২/১ লাইন তো লেখবি নাকি 🥵 empty!', event.threadID, event.messageID);
     const keywordSearch = args.join(" ");
     var path = `${__dirname}/cache/1.mp3`
     if (fs.existsSync(path)) { 
@@ -81,7 +25,7 @@ module.exports.run = async function ({ api, event, args }) {
             var data = await downloadMusicFromYoutube(args.join(" "), path);
             if (fs.statSync(path).size > 26214400) return api.sendMessage('Unable to send files because the capacity is greater than 25MB .', event.threadID, () => fs.unlinkSync(path), event.messageID);
             return api.sendMessage({ 
-                body: `•┄┅════❁🌺❁════┅┄•\n\n🪐 Title: ${data.title}\n🎼 Name Channel: ${data.author}\n🕥 Time: ${this.convertHMS(data.dur)}\n👀 Views: ${data.viewCount}\n❤️ Likes: ${data.likes}\n🕘 Processing time: ${Math.floor((Date.now()- data.timestart)/1000)} second\n𝐀𝐏𝐈 𝐅𝐫𝐨𝐦\n𝐈𝐬𝐥𝐚𝐦𝐢𝐜𝐤 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭\n\n•┄┅════❁🌺❁════┅┄•\n•—»✨ 𝐏𝐥𝐚𝐲 𝐌𝐮𝐬𝐢𝐜 ✨«—•`,
+                body: `🎵 Title: ${data.title}\n🎶 Name Channel: ${data.author}\n⏱️ Time: ${this.convertHMS(data.dur)}\n👀 Views: ${data.viewCount}\n👍 Likes: ${data.likes}\n⏱️ Processing time: ${Math.floor((Date.now()- data.timestart)/1000)} second\n💿====DISME PROJECT====💿`,
                 attachment: fs.createReadStream(path)}, event.threadID, ()=> fs.unlinkSync(path), 
             event.messageID)
             
