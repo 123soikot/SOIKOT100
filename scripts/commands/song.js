@@ -3,7 +3,7 @@ const ytdl = require('ytdl-core');
 const { resolve } = require('path');
 async function downloadMusicFromYoutube(link, path) {
   var timestart = Date.now();
-  if(!link) return 'Thiếu link'
+  if(!link) return 'Thiс║┐u link'
   var resolveFunc = function () { };
   var rejectFunc = function () { };
   var returnPromise = new Promise(function (resolve, reject) {
@@ -35,7 +35,7 @@ module.exports.config = {
   permission: 0,
   credits: "Nayan",
   description: "example",
-  prefix: false,
+  prefix: true,
   category: "Media", 
   usages: "user", 
   cooldowns: 5,
@@ -54,7 +54,7 @@ module.exports.handleReply = async function ({ api, event, handleReply }) {
         if (fs.statSync(path).size > 26214400) return api.sendMessage('The file cannot be sent because the capacity is greater than 25MB.', event.threadID, () => fs.unlinkSync(path), event.messageID);
         api.unsendMessage(handleReply.messageID)
         return api.sendMessage({ 
-		body: `🎵 Title: ${data.title}\n🎶 Name Channel : ${data.author}\n⏱️ Time: ${this.convertHMS(data.dur)}\n👀 Views: ${data.viewCount}\n🥰 Likes: ${data.likes}\n⏱️Processing time: ${Math.floor((Date.now()- data.timestart)/1000)} second\n💿====DISME PROJECT====💿`,
+		body: `ЁЯО╡ Title: ${data.title}\nЁЯО╢ Name Channel : ${data.author}\nтП▒я╕П Time: ${this.convertHMS(data.dur)}\nЁЯСА Views: ${data.viewCount}\nЁЯе░ Likes: ${data.likes}\nтП▒я╕ПProcessing time: ${Math.floor((Date.now()- data.timestart)/1000)} second\nЁЯТ┐====DISME PROJECT====ЁЯТ┐`,
             attachment: fs.createReadStream(path)}, event.threadID, ()=> fs.unlinkSync(path), 
          event.messageID)
             
@@ -72,7 +72,7 @@ module.exports.convertHMS = function(value) {
     return (hours != '00' ? hours +':': '') + minutes+':'+seconds;
 }
 module.exports.run = async function ({ api, event, args }) {
-    if (args.length == 0 || !args) return api.sendMessage('» উফফ আবাল কি গান শুনতে চাস তার ২/১ লাইন তো লেখবি নাকি 🥵 empty!', event.threadID, event.messageID);
+    if (args.length == 0 || !args) return api.sendMessage('┬╗ ржЙржлржл ржЖржмрж╛рж▓ ржХрж┐ ржЧрж╛ржи рж╢рзБржирждрзЗ ржЪрж╛рж╕ рждрж╛рж░ рзи/рзз рж▓рж╛ржЗржи рждрзЛ рж▓рзЗржЦржмрж┐ ржирж╛ржХрж┐ ЁЯе╡ empty!', event.threadID, event.messageID);
     const keywordSearch = args.join(" ");
     var path = `${__dirname}/cache/1.mp3`
     if (fs.existsSync(path)) { 
@@ -83,7 +83,7 @@ module.exports.run = async function ({ api, event, args }) {
             var data = await downloadMusicFromYoutube(args.join(" "), path);
             if (fs.statSync(path).size > 26214400) return api.sendMessage('Unable to send files because the capacity is greater than 25MB .', event.threadID, () => fs.unlinkSync(path), event.messageID);
             return api.sendMessage({ 
-                body: `🎵 Title: ${data.title}\n🎶 Name Channel: ${data.author}\n⏱️ Time: ${this.convertHMS(data.dur)}\n👀 Views: ${data.viewCount}\n👍 Likes: ${data.likes}\n⏱️ Processing time: ${Math.floor((Date.now()- data.timestart)/1000)} second\n💿====DISME PROJECT====💿`,
+                body: `ЁЯО╡ Title: ${data.title}\nЁЯО╢ Name Channel: ${data.author}\nтП▒я╕П Time: ${this.convertHMS(data.dur)}\nЁЯСА Views: ${data.viewCount}\nЁЯСН Likes: ${data.likes}\nтП▒я╕П Processing time: ${Math.floor((Date.now()- data.timestart)/1000)} second\nЁЯТ┐====DISME PROJECT====ЁЯТ┐`,
                 attachment: fs.createReadStream(path)}, event.threadID, ()=> fs.unlinkSync(path), 
             event.messageID)
             
@@ -101,7 +101,7 @@ module.exports.run = async function ({ api, event, args }) {
               num = num+=1
               msg += (`${num} - ${value.title} (${value.length.simpleText})\n\n`);
             }
-            var body = `»🔎 There's ${link.length} the result coincides with your search keyword:\n\n${msg}» Reply(feedback) select one of the searches above `
+            var body = `┬╗ЁЯФО There's ${link.length} the result coincides with your search keyword:\n\n${msg}┬╗ Reply(feedback) select one of the searches above `
             return api.sendMessage({
               body: body
             }, event.threadID, (error, info) => global.client.handleReply.push({
