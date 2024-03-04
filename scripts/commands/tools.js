@@ -3,15 +3,15 @@ const fs = require('fs');
 const axios = require('axios');
 
 module.exports.config = {
- name: "tools",
- version: "9",
- hasPermission: 0,
- credits: "Eugene Aguilar",
- usages: "ai [ your question ]\n tiktokdl [ tiktok link ]\nCupcut [ cupcut template link ]\nTiksearch [ title ]\n shoti [ simple type ]\nRemini [ reply a photo ]",
- description: "Ai, tiktokdl, Cupcut, Tiksearch, shoti, remini",
-prefix: false,
- commandCategory: "tools",
- cooldowns: 9,
+  name: "tools",
+  version: "2.0.0",
+  permission: 0,
+  credits: "Nayan",
+  description: "Ai, tiktokdl, Cupcut, Tiksearch, shoti, remini", commandCategory: "tools",
+  prefix: false,
+  category: "admin",
+  usages: "ai [ your question ]\n tiktokdl [ tiktok link ]\nCupcut [ cupcut template link ]\nTiksearch [ title ]\n shoti [ simple type ]\nRemini [ reply a photo ]",
+  cooldowns: 5,
 };
 
 module.exports.run = async function ({ api, event, args }) {
