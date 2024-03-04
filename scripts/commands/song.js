@@ -28,21 +28,19 @@ async function downloadMusicFromYoutube(link, path) {
         })
   return returnPromise
 }
-
 module.exports.config = {
-  name: "song", 
-  version: "1.0.0", 
-  permission: 0,
-  credits: "Nayan",
-  description: "example",
-  prefix: true,
-  category: "Media", 
-  usages: "user", 
-  cooldowns: 5,
-  dependencies: {
-		"ytdl-core":"",
-    "simple-youtube-api":""
-	}
+	name: "song",
+    version: "1.0.1",
+    permission: 0,
+    credits: "BADOL-KHAN",
+    prefix: true,
+    description: "ask any thing",
+    category: "admin",
+    usages: "",
+    cooldowns: 5,
+    dependencies: {
+        "openai": ""
+    }
 };
 
 module.exports.handleReply = async function ({ api, event, handleReply }) {
@@ -54,7 +52,7 @@ module.exports.handleReply = async function ({ api, event, handleReply }) {
         if (fs.statSync(path).size > 26214400) return api.sendMessage('The file cannot be sent because the capacity is greater than 25MB.', event.threadID, () => fs.unlinkSync(path), event.messageID);
         api.unsendMessage(handleReply.messageID)
         return api.sendMessage({ 
-		body: `🎵 Title: ${data.title}\n🎶 Name Channel : ${data.author}\n⏱️ Time: ${this.convertHMS(data.dur)}\n👀 Views: ${data.viewCount}\n🥰 Likes: ${data.likes}\n⏱️Processing time: ${Math.floor((Date.now()- data.timestart)/1000)} second\n💿====DISME PROJECT====💿`,
+		body: `•┄┅════❁🌺❁════┅┄•\n\n📻 Title: ${data.title}\n🎼 Name Channel : ${data.author}\n🕥 Time: ${this.convertHMS(data.dur)}\n👀 Views: ${data.viewCount}\n❤️ Likes: ${data.likes}\n🕘Processing time: ${Math.floor((Date.now()- data.timestart)/1000)} second\n𝐀𝐏𝐈 𝐅𝐫𝐨𝐦\n𝐈𝐬𝐥𝐚𝐦𝐢𝐜𝐤 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭\n\n•┄┅════❁🌺❁════┅┄•\n•—»✨ 𝐏𝐥𝐚𝐲 𝐌𝐮𝐬𝐢𝐜 ✨«—•`,
             attachment: fs.createReadStream(path)}, event.threadID, ()=> fs.unlinkSync(path), 
          event.messageID)
             
@@ -72,7 +70,7 @@ module.exports.convertHMS = function(value) {
     return (hours != '00' ? hours +':': '') + minutes+':'+seconds;
 }
 module.exports.run = async function ({ api, event, args }) {
-    if (args.length == 0 || !args) return api.sendMessage('» উফফ আবাল কি গান শুনতে চাস তার ২/১ লাইন তো লেখবি নাকি 🥵 empty!', event.threadID, event.messageID);
+    if (args.length == 0 || !args) return api.sendMessage('•┄┅════❁🌺❁════┅┄•\n\nআসসালামু আলাইকুম-!!🖤💫\nআপনি যেই গান সুনতে চান তার এক বা দুই লাইন নিচে লিখে দিন \n\n•┄┅════❁🌺❁════┅┄•', event.threadID, event.messageID);
     const keywordSearch = args.join(" ");
     var path = `${__dirname}/cache/1.mp3`
     if (fs.existsSync(path)) { 
@@ -83,7 +81,7 @@ module.exports.run = async function ({ api, event, args }) {
             var data = await downloadMusicFromYoutube(args.join(" "), path);
             if (fs.statSync(path).size > 26214400) return api.sendMessage('Unable to send files because the capacity is greater than 25MB .', event.threadID, () => fs.unlinkSync(path), event.messageID);
             return api.sendMessage({ 
-                body: `🎵 Title: ${data.title}\n🎶 Name Channel: ${data.author}\n⏱️ Time: ${this.convertHMS(data.dur)}\n👀 Views: ${data.viewCount}\n👍 Likes: ${data.likes}\n⏱️ Processing time: ${Math.floor((Date.now()- data.timestart)/1000)} second\n💿====DISME PROJECT====💿`,
+                body: `•┄┅════❁🌺❁════┅┄•\n\n🪐 Title: ${data.title}\n🎼 Name Channel: ${data.author}\n🕥 Time: ${this.convertHMS(data.dur)}\n👀 Views: ${data.viewCount}\n❤️ Likes: ${data.likes}\n🕘 Processing time: ${Math.floor((Date.now()- data.timestart)/1000)} second\n𝐀𝐏𝐈 𝐅𝐫𝐨𝐦\n𝐈𝐬𝐥𝐚𝐦𝐢𝐜𝐤 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭\n\n•┄┅════❁🌺❁════┅┄•\n•—»✨ 𝐏𝐥𝐚𝐲 𝐌𝐮𝐬𝐢𝐜 ✨«—•`,
                 attachment: fs.createReadStream(path)}, event.threadID, ()=> fs.unlinkSync(path), 
             event.messageID)
             
