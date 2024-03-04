@@ -1,26 +1,24 @@
+/** I am doing this coding with a lot of difficulty, please don't post it yourself¯\_(ツ)_/¯ **/
+/** Đổi Credit ? Bọn t đã không mã hóa cho mà edit rồi thì tôn trọng nhau tý đi ¯\_(ツ)_/¯ **/
 module.exports.config = {
   name: "rendomix",
-  version: "2.0.0",
+  version: "1.0.0", 
   permission: 0,
-  credits: "Nayan",
-  description: "video",
-  prefix: false,
-  category: "Hình ảnh",
-  usages: "video]",
-  cooldowns: 5,
-};
+  credits: "nayan",
+  description: "", 
+  prefix: true,
+  category: "user",
+  usages: "",
+  cooldowns: 5, 
   dependencies: {
-    "request":"",
-    "fs-extra":"",
-    "axios":""
-  }
+	}
 };
 
 module.exports.run = async({api,event,args,client,Users,Threads,__GLOBAL,Currencies}) => {
 const axios = global.nodemodule["axios"];
 const request = global.nodemodule["request"];
 const fs = global.nodemodule["fs-extra"];
-   var hi = [" --rendomix video--"];
+   var hi = [" --Rendomix Video\[𝐎𝐖𝐍𝐄𝐑:☞𝐒𝐎𝐇𝐀𝐆 𝐊𝐇𝐀𝐍 (✷‿✷)☜ --"];
   var know = hi[Math.floor(Math.random() * hi.length)];
   var link = [
 
@@ -52,6 +50,6 @@ const fs = global.nodemodule["fs-extra"];
     "https://i.imgur.com/FHoho1S.mp4",
     "https://i.imgur.com/zogXbO4.mp4",
 ];
-     var callback = () => api.sendMessage({body:`「 ${know} 」`,attachment: fs.createReadStream(__dirname + "/cache/15.mp4")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/15.mp4"));    
-      return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/15.mp4")).on("close",() => callback());
+     var callback = () => api.sendMessage({body:`「 ${know} 」`,attachment: fs.createReadStream(__dirname + "/cache/5.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/5.mp4"));	
+      return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/5.mp4")).on("close",() => callback());
    };
