@@ -3,7 +3,7 @@ module.exports.config = {
 	version: "1.0.0",
 	permission: 0,
 	credits: "Nayan",
-	prefix: true,
+	prefix: false,
 	description: "get user id.",
 	category: "without prefix",
 	cooldowns: 5
