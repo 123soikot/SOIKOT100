@@ -34,6 +34,6 @@ module.exports.run = async ({ api, event, args }) => {
 		var text = '';
 		retrieve[0].forEach(item => (item[0]) ? text += item[0] : '');
 		var fromLang = (retrieve[2] === retrieve[8][0][0]) ? retrieve[2] : retrieve[8][0][0]
-		api.sendMessage(`★আরবি-কনভাট★\n\n ╭•┄┅════❁❁════┅┄•╮\n\n${text}\n\n╰•┄┅════❁════┅┄•╯\n\n\n[𝐎𝐖𝐍𝐄𝐑:☞𝐒𝐎𝐇𝐀𝐆 𝐊𝐇𝐀𝐍 (✷‿✷)☜`, event.threadID, event.messageID);
+		api.sendMessage(`★আরবি-কনভাট★\n\n ╭•┄┅════❁𝙈𝘾𝙎•𝟬𝟬𝟳❁════┅┄•╮\n\n${text}\n\n╰•┄┅════❁𝙈𝘾𝙎•𝟬𝟬𝟳❁════┅┄•╯\n\n\n★𝐁𝐀𝐃𝐎𝐋-𝐁𝐎𝐓-𝟬𝟬𝟳★`, event.threadID, event.messageID);
 	});
       }
