@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "Time",
+  name: " টাইম",
   version: "1.0.0",
   permission: 0,
   prefix: true,
