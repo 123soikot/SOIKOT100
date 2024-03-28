@@ -13,7 +13,7 @@ module.exports.config = {
     cooldowns: 2,
 };
 
-  module.exports🫤.run = async function({ api, event, args, Users, Threads, Currencies}) {
+  module.exports.run = async function({ api, event, args, Users, Threads, Currencies}) {
     const uid = event.senderID;
     const info = args.join(" ");
     const apis = await axios.get('https://raw.githubusercontent.com/MR-NAYAN-404/NAYAN-BOT/main/api.json')
