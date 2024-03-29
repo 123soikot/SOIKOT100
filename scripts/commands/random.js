@@ -37,7 +37,7 @@ module.exports.run = async function({ api, event, args }) {
     allimage.push(fs.createReadStream(__dirname + "/cache/video.mp4"));
 	
     {
-        msg += `${cp}\n\n𝐓𝐨𝐭𝐚𝐥 𝐕𝐢𝐝𝐞𝐨𝐬: [${ln}]\n\n[𝐎𝐖𝐍𝐄𝐑:☞𝐒𝐎𝐇𝐀𝐆 𝐊𝐇𝐀𝐍 (✷‿✷)☜]`
+        msg += `${cp}\n\n𝐓𝐨𝐭𝐚𝐥 𝐕𝐢𝐝𝐞𝐨𝐬: [${ln}]\n\n[𝐎𝐖𝐍𝐄𝐑:☞Ex 卝 বয়ফ্রেন্ডヅ (✷‿✷)☜]`
     }
     
     return api.sendMessage({
