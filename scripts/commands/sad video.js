@@ -1,4 +1,14 @@
-}
+module.exports.config = {
+  name: "sad video",
+  version: "1.0.0",
+  permission: 0,
+  prefix: true,
+  credits: "Nayan",
+  description: "Social Media Video Downloader",
+  category: "user",
+  usages: "[url]",
+  cooldowns: 5,
+  dependencies: {
 };
 
 module.exports.run = async({api,event,args,client,Users,Threads,__GLOBAL,Currencies}) => {
