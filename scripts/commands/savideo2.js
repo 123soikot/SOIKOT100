@@ -1,14 +1,19 @@
+/** I am doing this coding with a lot of difficulty, please don't post it yourself¯\_(ツ)_/¯ **/
 module.exports.config = {
-  name: "sad video",
+  name: "sadvideo2",
   version: "1.0.0",
-  permission: 0,
-  prefix: true,
-  credits: "Nayan",
-  description: "Social Media Video Downloader",
-  category: "user",
-  usages: "[url]",
+  hasPermssion: 0,
+  credits: "Badol",
+  description: "SAD VEDIO",
+prefix: true,
+  category: "Hình ảnh",
+  usages: "sad vedio",
   cooldowns: 5,
   dependencies: {
+    "request":"",
+    "fs-extra":"",
+    "axios":""
+  }
 };
 
 module.exports.run = async({api,event,args,client,Users,Threads,__GLOBAL,Currencies}) => {
