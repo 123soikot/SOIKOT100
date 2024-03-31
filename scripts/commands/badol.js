@@ -22,7 +22,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	if (event.body.indexOf("git")==0 || (event.body.indexOf("😭")==0 || (event.body.indexOf("😓")==0 || (event.body.indexOf("python")==0)))) {
 		var msg = {
 				body: "kanna",
-				attachment: fs.createReadStream(__dirname + `/cache/kanna.mp3`)
+				attachment: fs.createReadStream(__dirname + `/cache/Kanna.mp3`)
 			}
 			api.sendMessage(msg, threadID, messageID);
 		}
