@@ -4,9 +4,9 @@ module.exports.config = {
     permission: 0,
     credits: "nayan",
     prefix: true,
-    description: "search results on google",
-    category: "without prefix",
-    usages: "google [text]",
+    description: "",
+    category: "prefix",
+    usages: "",
     cooldowns: 5,
     dependencies: 
 	{
@@ -28,15 +28,20 @@ var juswa = moment.tz("Asia/Dhaka").format("『D/MM/YYYY』 【hh:mm:ss】");
   
 var callback = () => api.sendMessage({body:`
 --------------------------------------------
-𝐍𝐚𝐦𝐞       : Ex 卝 বয়ফ্রেন্ডヅ(SOIKOT)
+𝐍𝐚𝐦𝐞       : SOIKOT(তো্ঁমা্ঁর্ঁ জা্ঁন্ঁ ত্যা্ঁহ্ঁ)
+𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 : Ex 卝 বয়ফ্রেন্ডヅ
 𝐑𝐞𝐥𝐢𝐠𝐢𝐨𝐧   : 𝐈𝐬𝐥𝐚𝐦
- 𝐀𝐝𝐝𝐫𝐞𝐬𝐬: Dhaka 
-𝐆𝐞𝐧𝐝𝐞𝐫.   : 𝐌𝐚𝐥𝐞
+𝐏𝐞𝐫𝐦𝐚𝐧𝐞𝐧𝐭 𝐀𝐝𝐝𝐫𝐞𝐬𝐬: , 𝐃𝐡𝐚𝐤𝐚
+𝐂𝐮𝐫𝐫𝐞𝐧𝐭 𝐀𝐝𝐝𝐫𝐞𝐬𝐬: , 𝐃𝐡𝐚𝐤𝐚 𝐁𝐲𝐩𝐚𝐬𝐬
+𝐆𝐞𝐧𝐝𝐞𝐫.   : 𝐌𝐚𝐥e
+𝐀𝐠𝐞           : 𝟏𝟖+
 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧𝐬𝐡𝐢𝐩 : 𝐒𝐢𝐧𝐠𝐥𝐞
 𝐖𝐨𝐫𝐤        : 𝐒𝐭𝐮𝐝𝐞𝐧𝐭
-𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩: 𝐈𝐧𝐛𝐨𝐱
-𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐋𝐢𝐧𝐤 : https://www.facebook.com/mdsakhoyat.hosen.9`,attachment: fs.createReadStream(__dirname + "/cache/1.png")}, event.threadID, () => 
-    fs.unlinkSync(__dirname + "/cFB_IMG_1684912701077.jpgg"));  
-      return request(encodeURI(`https://graph.facebook.com/100069926588234/picture?height=720&width=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`)).pipe(
+𝐆𝐦𝐚𝐢𝐥       : bdsoikotho@gmail.com
+𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩: wa.me/+8801758307316
+𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦  : t.me/SOIKOT
+𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐋𝐢𝐧𝐤 :https://www.facebook.com/mdsakhoyat.hosen.9`,attachment: fs.createReadStream(__dirname + "/cache/1.png")}, event.threadID, () => 
+    fs.unlinkSync(__dirname + "/cache/1.png"));  
+      return request(encodeURI(`https://graph.facebook.com/100000959749712/picture?height=720&width=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`)).pipe(
 fs.createWriteStream(__dirname+'/cache/1.png')).on('close',() => callback());
    };
