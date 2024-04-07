@@ -6,7 +6,7 @@ module.exports.config = {
   name: "album",
   version: "2.0.0",
   permission: 0,
-  credits: "Nayan",
+  credits: "Dipto",
   description: "Displays album options for selection.",
   prefix: false,
   category: "Media",
@@ -28,11 +28,10 @@ module.exports.run = async function ({ api, event, args}) {
      "𝗛𝗼𝗿𝗻𝘆 𝘃𝗶𝗱𝗲𝗼",
      "𝗖𝗼𝘂𝗽𝗹𝗲 𝗩𝗶𝗱𝗲𝗼",
      "𝗙𝗹𝗼𝘄𝗲𝗿 𝗩𝗶𝗱𝗲𝗼",
-    "𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰 𝗩𝗶𝗱𝗲𝗼"
+    "𝗥𝗮𝗻𝗱𝗼𝗺 𝗣𝗵𝗼𝘁𝗼"
   ];
-  const message = "❤️‍🩹 𝗖𝗵𝗼𝗼𝘀𝗲 𝗮𝗻 𝗼𝗽𝘁𝗶𝗼𝗻𝘀 𝗕𝗮𝗯𝘆 <💝\n"+"✿━━━━━━━━━━━━━━━━━━━━━━━✿\n"+ albumOptions.map((option, index) => `${index + 1}. ${option} 🐤`).join("\n")+"\n✿━━━━━━━━━━━━━━━━━━━━━━━✿";
-
-  await api.sendMessage({body: message,},event.threadID,(error, info) => {
+  const message = "❤️‍🩹 𝗖𝗵𝗼𝗼𝘀𝗲 𝗮𝗻 𝗼𝗽𝘁𝗶𝗼𝗻𝘀 𝗕𝗮𝗯𝘆 <💝\n"+"✿━━━━━━━━━━━━━━━━━━━━━━━✿\n"+ albumOptions.map((option, index) => `🎀 | ${index + 1}. ${option} 🐤`).join("\n")+`\n✿━━━━━━━━━━━━━━━━━━━━━━━✿\n🔰 | 𝐏𝐚𝐠𝐞 [ 𝟏/𝟐 ]\nℹ | 𝐓𝐲𝐩𝐞 ${global.config.PREFIX}album 2 - 𝐭𝐨 𝐬𝐞𝐞 𝐧𝐞𝐱𝐭 𝐩𝐚𝐠𝐞.\n✿━━━━━━━━━━━━━━━━━━━━━━━✿`;
+    await api.sendMessage({body: message,},event.threadID,(error, info) => {
   global.client.handleReply.push({
     name: this.config.name,
     type: 'reply',
@@ -43,18 +42,19 @@ module.exports.run = async function ({ api, event, args}) {
 }else if (args[0] === "2"){
     { api.setMessageReaction("😘", event.messageID, (err) => {}, true);
     }
-  const albumOptions = [
-    "𝗦𝗶𝗴𝗺𝗮 𝗥𝘂𝗹𝗲",
-    "𝗟𝘆𝗿𝗶𝗰𝘀 𝗩𝗶𝗱𝗲𝗼",
-    "𝗖𝗮𝘁 𝗩𝗶𝗱𝗲𝗼",
-    "𝗥𝗮𝗻𝗱𝗼𝗺 𝗣𝗵𝗼𝘁𝗼",
-    "𝗙𝗿𝗲𝗲 𝗙𝗶𝗿𝗲 𝘃𝗶𝗱𝗲𝗼",
-    "18+ 𝘃𝗶𝗱𝗲𝗼",
-    "𝗙𝗼𝗼𝘁𝗕𝗮𝗹𝗹 𝘃𝗶𝗱𝗲𝗼",
-    "𝗚𝗶𝗿𝗹 𝘃𝗶𝗱𝗲𝗼"
-  ];
-    const message = "❤️‍🩹 𝗖𝗵𝗼𝗼𝘀𝗲 𝗮𝗻 𝗼𝗽𝘁𝗶𝗼𝗻𝘀 𝗕𝗮𝗯𝘆 <💝\n"+"✿━━━━━━━━━━━━━━━━━━━━━━━✿\n"+ albumOptions.map((option, index) => `${index + 11}. ${option} 🐤`).join("\n")+"\n✿━━━━━━━━━━━━━━━━━━━━━━━✿";
-
+    const albumOptions = [
+      "𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰 𝗩𝗶𝗱𝗲𝗼",
+      "𝗦𝗶𝗴𝗺𝗮 𝗥𝘂𝗹𝗲",
+      "𝗟𝘆𝗿𝗶𝗰𝘀 𝗩𝗶𝗱𝗲𝗼",
+      "𝗖𝗮𝘁 𝗩𝗶𝗱𝗲𝗼",
+      "18+ 𝘃𝗶𝗱𝗲𝗼",
+      "𝗙𝗿𝗲𝗲 𝗙𝗶𝗿𝗲 𝘃𝗶𝗱𝗲𝗼",
+      "𝗙𝗼𝗼𝘁𝗕𝗮𝗹𝗹 𝘃𝗶𝗱𝗲𝗼",
+      "𝗚𝗶𝗿𝗹 𝘃𝗶𝗱𝗲𝗼",
+      "𝗙𝗿𝗶𝗲𝗻𝗱𝘀 𝗩𝗶𝗱𝗲𝗼",
+      "𝗖𝗿𝗶𝗰𝗸𝗲𝘁 𝗩𝗶𝗱𝗲𝗼" 
+    ];
+      const message = "❤️‍🩹 𝗖𝗵𝗼𝗼𝘀𝗲 𝗮𝗻 𝗼𝗽𝘁𝗶𝗼𝗻𝘀 𝗕𝗮𝗯𝘆 <💝\n"+"✿━━━━━━━━━━━━━━━━━━━━━━━✿\n"+ albumOptions.map((option, index) => `🎀 | ${index + 11}. ${option} 🐤`).join("\n")+"\n✿━━━━━━━━━━━━━━━━━━━━━━━✿\n🔰 | 𝐏𝐚𝐠𝐞 [ 𝟐/𝟐 ]\n✿━━━━━━━━━━━━━━━━━━━━━━━✿";
   await api.sendMessage({body: message,},event.threadID,(error, info) => {
   global.client.handleReply.push({
     name: this.config.name,
@@ -65,12 +65,12 @@ module.exports.run = async function ({ api, event, args}) {
   })},event.messageID);
   }
 //------------Video Add--------------//
-const validCommands = ['cartoon', 'photo', 'lofi', 'sad', 'islamic','funny','horny','anime','love','baby','lyrics','sigma','photo','aesthetic','cat','flower','ff','sex','girl','football'];
+const validCommands = ['cartoon', 'photo', 'lofi', 'sad', 'islamic','funny','horny','anime','love','baby','lyrics','sigma','photo','aesthetic','cat','flower','ff','sex','girl','football','friend'];
   { api.setMessageReaction("👀", event.messageID, (err) => {}, true);
   }
   if (args[0] === 'list'){
  try {
-   const lRes = await axios.get(`https://all-image-genator-d1p.onrender.com/dipto/album?list=dipto`);
+   const lRes = await axios.get(`https://noobs-api.onrender.com/dipto/album?list=dipto`);
 const data = lRes.data;
      api.sendMessage(`🖤 𝗧𝗼𝘁𝗮𝗹 𝘃𝗶𝗱𝗲𝗼 𝗮𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗶𝗻 𝗮𝗹𝗯𝘂𝗺 🩵\n\n${data.data}`, event.threadID, event.messageID);
  } catch (error) {
@@ -130,22 +130,25 @@ const d1 = args[1]?args[1].toLowerCase() : '' ;
         query = 'addCat';
         break;
       case 'ff':
-         query = 'addFf';
+      query = 'addFf';
           break;
          case 'sex':
-          query = 'addSex';
+      query = 'addSex';
          break;
           case 'football':
-           query = 'addFootball';
+      query = 'addFootball';
          break;
         case 'girl':
-            query = 'addGirl';
+        query = 'addGirl';
+        break;
+       case 'friend':
+        query = 'addFriend';
         break;
          default:
             break;
     }
     try {
-        const response = await axios.get(`https://all-image-genator-d1p.onrender.com/dipto/imgur?url=${encodeURIComponent(URL)}`);
+        const response = await axios.get(`https://noobs-api.onrender.com/dipto/imgur?url=${encodeURIComponent(URL)}`);
         const imgurLink = response.data.data;
         const fileExtension = path.extname(imgurLink);
    let query2;
@@ -155,7 +158,7 @@ else if (fileExtension === '.mp4') {
             api.sendMessage('Invalid file format.', event.threadID, event.messageID);
             return;
         }
-        const svRes = await axios.get(`https://all-image-genator-d1p.onrender.com/dipto/album?add=${query2}&url=${imgurLink}`);
+        const svRes = await axios.get(`https://noobs-api.onrender.com/dipto/album?add=${query2}&url=${imgurLink}`);
 const data = svRes.data;
      //   console.log(data);
         api.sendMessage(`✅ | ${data.data}\n\n🔰 | ${data.data2}`, event.threadID, event.messageID);
@@ -163,8 +166,8 @@ const data = svRes.data;
 }
 };
 module.exports.handleReply = async function ({ api, event, handleReply }) {
- const admin = "61552819703988";
- api.unsendMessage(handleReply.messageID);
+  //api.unsendMessage(handleReply.messageID);
+  const admin = "61552819703988";
   if (event.type == "message_reply") {
   const reply = parseInt(event.body);
   if (isNaN(reply)) {
@@ -203,35 +206,36 @@ module.exports.handleReply = async function ({ api, event, handleReply }) {
     cp = "𝗡𝗮𝘄 𝗕𝗮𝗯𝘆 𝗟𝗼𝘃𝗲 𝘃𝗶𝗱𝗲𝗼 <😍";
     }
     else if (reply === 9) {
-    query = "baby";
+    query = "flower";
     cp = "𝗡𝗮𝘄 𝗕𝗮𝗯𝘆 𝗙𝗹𝗼𝘄𝗲𝗿 𝘃𝗶𝗱𝗲𝗼 < 🌷🌸";
     }
-    else if (reply === 10) {
+  else if (reply === 10) {
+    query = "photo";
+    cp = "𝗡𝗮𝘄 𝗕𝗮𝗯𝘆 𝗥𝗮𝗻𝗱𝗼𝗺 𝗣𝗵𝗼𝘁𝗼 <😙";
+      }
+    else if (reply === 11) {
     query = "aesthetic";
     cp = "𝗡𝗮𝘄 𝗕𝗮𝗯𝘆 𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰 𝗩𝗶𝗱𝗲𝗼 <😙";
-       }
-    else if (reply === 11) {
+    }
+    else if (reply === 12) {
     query = "sigma";
     cp = "𝗡𝗮𝘄 𝗕𝗮𝗯𝘆 𝗦𝗶𝗴𝗺𝗮 𝘃𝗶𝗱𝗲𝗼 <🐤";
     }
-    else if (reply === 12) {
+    else if (reply === 13) {
     query = "lyrics";
     cp = "𝗡𝗮𝘄 𝗕𝗮𝗯𝘆 𝗟𝘆𝗿𝗶𝗰𝘀 𝘃𝗶𝗱𝗲𝗼 <🥰";
     }
-    else if (reply === 13) {
+    else if (reply === 14) {
     query = "cat";
     cp = "𝗡𝗮𝘄 𝗕𝗮𝗯𝘆 𝗖𝗮𝘁 𝗩𝗶𝗱𝗲𝗼 <😙";
-      }
-    else if (reply === 14) {
-    query = "photo";
-    cp = "𝗡𝗮𝘄 𝗕𝗮𝗯𝘆 𝗥𝗮𝗻𝗱𝗼𝗺 𝗣𝗵𝗼𝘁𝗼 <😙";
-    }else if (reply === 15) {
-      query = "ff";
-      cp = "𝗡𝗮𝘄 𝗕𝗮𝗯𝘆 𝗙𝗿𝗲𝗲 𝗙𝗶𝗿𝗲 𝗩𝗶𝗱𝗲𝗼 <😙";
-      }
-  else if (reply === 16  && event.senderID == admin) {
+    }
+  else if (reply === 15 && event.senderID === admin) {
     query = "sex";
     cp = "𝗡𝗮𝘄 𝗕𝗮𝗯𝘆 𝗦𝗲𝘅 𝘃𝗶𝗱𝗲𝗼 <😙";
+  }
+  else if (reply === 16) {
+      query = "ff";
+      cp = "𝗡𝗮𝘄 𝗕𝗮𝗯𝘆 𝗙𝗿𝗲𝗲 𝗙𝗶𝗿𝗲 𝗩𝗶𝗱𝗲𝗼 <😙";
   }
     else if (reply === 17) {
     query = "football";
@@ -240,9 +244,12 @@ module.exports.handleReply = async function ({ api, event, handleReply }) {
     else if (reply === 18) {
     query = "girl";
     cp = "𝗡𝗮𝘄 𝗕𝗮𝗯𝘆 𝗚𝗶𝗿𝗹 𝘃𝗶𝗱𝗲𝗼<😙";
+    }else if (reply === 19) {
+    query = "friend";
+    cp = "𝗡𝗮𝘄 𝗕𝗮𝗯𝘆 𝗙𝗿𝗶𝗲𝗻𝗱𝘀 𝘃𝗶𝗱𝗲𝗼<😙";
     }
   try {
-    const res = await axios.get(`https://all-image-genator-d1p.onrender.com/dipto/album?type=${query}`);
+    const res = await axios.get(`https://noobs-api.onrender.com/dipto/album?type=${query}`);
     const imgUrl = res.data.data;
     const imgRes = await axios.get(imgUrl, { responseType: 'arraybuffer' });
 const ex = path.extname(imgUrl);
