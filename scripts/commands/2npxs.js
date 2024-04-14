@@ -1,6 +1,6 @@
 const fs = require("fs");
 module.exports.config = {
-	name: "2npxs",
+	name: "😓",
     version: "1.0.1",
 	hasPermssion: 0,
 	credits: "VanHung - Fixed by LTD", 
