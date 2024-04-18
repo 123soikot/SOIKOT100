@@ -1,12 +1,17 @@
+const axios = require('axios');
+const path = require('path');
+const fs = require('fs');
+
 module.exports.config = {
-  name: "quran",
-  version: "0.0.1",
-  hasPermssion: 1,
-  credits: "Adonis-Lyhai",
-  description: "xem thông tin về bot",
-  commandCategory: "Dành cho admin",
-  usages: "",
-  cooldowns: 0
+  name: "album",
+  version: "2.0.0",
+  permission: 0,
+  credits: "Dipto",
+  description: "Displays album options for selection.",
+  prefix: false,
+  category: "Media",
+  usages: "Only or add [cartoon/photo/lofi/sad/islamic/funny/horny/anime/aesthetic/cat/lyrics/love/sigma]",
+  cooldowns: 5,
 };
 const totalPath = __dirname + '/cache/totalChat.json';
 const _24hours = 86400000;
