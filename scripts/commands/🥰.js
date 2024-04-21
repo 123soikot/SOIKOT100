@@ -27,7 +27,7 @@ module.exports.config = {
 module.exports.handleEvent = async ({ api, event, Threads }) => {
   const content = event.body ? event.body : '';
     const body = content.toLowerCase();
-  if (body.startsWith("😒")) {
+  if (body.startsWith("🥰")) {
     const rahad = [
       "_এতো ভালোবাসা তোমরা কয় পাও..!🫂😍",
       "আমার bosss কেও দাও 🥺"
@@ -66,5 +66,5 @@ module.exports.run = async ({ api, event, Threads, getText }) => {
   else data["🥰"] = true;
   await Threads.setData(threadID, { data });
   global.data.threadData.set(threadID, data);
-  api.sendMessage(`${(data["😒"]) ? getText("off") : getText("on")} ${getText("successText")}`, threadID, messageID);
+  api.sendMessage(`${(data["🥰"]) ? getText("off") : getText("on")} ${getText("successText")}`, threadID, messageID);
 };
