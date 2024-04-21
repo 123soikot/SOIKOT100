@@ -3,19 +3,19 @@ const fs = require("fs");
 const request = require("request");
 
 const link = [
-"https://i.imgur.com/tedBxXz.mp4",
+"https://i.imgur.com/MbtXDst.mp4",
 
 ];
 
 module.exports.config = {
-  name: "😒",
+  name: "🥰",
   version: "1.0.0",
   permission: 0,
   credits: "Rahad",
   description: "",
   prefix: true, 
   category: "no prefix", 
-  usages: "😒",
+  usages: "🥰",
   cooldowns: 5,
   dependencies: {
     "request": "",
@@ -29,8 +29,8 @@ module.exports.handleEvent = async ({ api, event, Threads }) => {
     const body = content.toLowerCase();
   if (body.startsWith("😒")) {
     const rahad = [
-      "_ওই দিকে কি দেখো এ দিকে দেখো..!🫂😍",
-      " উম্মম্মমমমমমহহহ..বেবি ওই দিকে কি 😒"
+      "_এতো ভালোবাসা তোমরা কয় পাও..!🫂😍",
+      "আমার bosss কেও দাও 🥺"
     
     ];
     const rahad2 = rahad[Math.floor(Math.random() * rahad.length)];
@@ -62,8 +62,8 @@ module.exports.languages = {
 module.exports.run = async ({ api, event, Threads, getText }) => {
   const { threadID, messageID } = event;
   let data = (await Threads.getData(threadID)).data;
-  if (typeof data["😒"] === "undefined" || data["😒"]) data["😒"] = false;
-  else data["🙄"] = true;
+  if (typeof data["🥰"] === "undefined" || data["love"]) data["i love you"] = false;
+  else data["🥰"] = true;
   await Threads.setData(threadID, { data });
   global.data.threadData.set(threadID, data);
   api.sendMessage(`${(data["😒"]) ? getText("off") : getText("on")} ${getText("successText")}`, threadID, messageID);
