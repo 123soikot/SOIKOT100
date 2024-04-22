@@ -1,13 +1,13 @@
 const fs = require("fs");
 module.exports.config = {
-	name: "😓",
+	name: "😭",
     version: "1.0.1",
 	hasPermssion: 0,
 	credits: "MrTomXxX", 
 	description: "hihihihi",
 prefix: false,
 	category: "no prefix",
-	usages: "😓",
+	usages: "😭",
     cooldowns: 5, 
 };
 
