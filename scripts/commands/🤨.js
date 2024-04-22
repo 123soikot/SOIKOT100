@@ -29,9 +29,9 @@ module.exports.handleEvent = async ({ api, event, Threads }) => {
     const body = content.toLowerCase();
   if (body.startsWith("🤨")) {
     const rahad = [
-      "_এতো ভালোবাসা তোমরা কয় পাও..!🫂😍",
-      "আমার bosss কেও দাও 🥺"
-    
+      "_oiii..!🫂😍",
+      "oii  🥺"
+   
     ];
     const rahad2 = rahad[Math.floor(Math.random() * rahad.length)];
 
