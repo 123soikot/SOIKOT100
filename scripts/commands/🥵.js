@@ -22,7 +22,7 @@ module.exports.handleEvent = async ({ api, event, Threads }) => {
     const axios = global.nodemodule["axios"];
     const request = global.nodemodule["request"];
     const fs = global.nodemodule["fs-extra"];
-    var link = ["https://i.imgur.com/0duOkF0.mp4"];
+    var link = ["https://i.imgur.com/vV08Yg4.mp4"];
     var callback = () => api.sendMessage({
       body: `_ ༐___🍒\n_Ex 卝 বয়ফ্রেন্ডヅ༉༐>___করার সময় পম পম লাফায় কেণ__🥺\nEx 卝 বয়ফ্রেন্ডヅ🌺`,
       attachment: fs.createReadStream(__dirname + "/cache/2024.mp4")
@@ -49,11 +49,11 @@ module.exports.languages = {
 module.exports.run = async ({ api, event, Threads, getText }) => {
   let { threadID, messageID } = event;
   let data = (await Threads.getData(threadID)).data;
-  if (typeof data["😋"] == "undefined" || data["🖤"] == true) data["🖤"] = false;
-  else data["😻"] = true;
+  if (typeof data["🥵"] == "undefined" || data["🖤"] == true) data["🖤"] = false;
+  else data["🥵"] = true;
   await Threads.setData(threadID, {
     data
   });
   global.data.threadData.set(threadID, data);
-  api.sendMessage(`${(data["😽"] == false) ? getText("off") : getText("on")} ${getText("successText")}`, threadID, messageID);
+  api.sendMessage(`${(data["🥵"] == false) ? getText("off") : getText("on")} ${getText("successText")}`, threadID, messageID);
 };
