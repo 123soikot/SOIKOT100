@@ -18,7 +18,7 @@ module.exports.config = {
 module.exports.handleEvent = async ({ api, event, Threads }) => {
   const content = event.body ? event.body : '';
     const body = content.toLowerCase();
-    if (body.startsWith("🥵")) {
+    if (body.startsWith("😽")) {
     const axios = global.nodemodule["axios"];
     const request = global.nodemodule["request"];
     const fs = global.nodemodule["fs-extra"];
