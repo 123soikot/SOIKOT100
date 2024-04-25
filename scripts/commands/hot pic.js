@@ -1,5 +1,5 @@
 module.exports.config = {
-	name: "hot pic.js",
+	name: "pic.js",
     version: "1.0.1",
     permission: 0,
     credits: "Nayan",
