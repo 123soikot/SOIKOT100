@@ -1,12 +1,15 @@
 module.exports.config = {
-  name: "quran",
-  version: "0.0.1",
-  hasPermssion: 1,
-  credits: "Adonis-Lyhai",
-  description: "xem thông tin về bot",
-  commandCategory: "Dành cho admin",
-  usages: "",
-  cooldowns: 0
+	name: "কোরআন",
+    version: "1.0.1",
+    permission: 0,
+    credits: "Nayan",
+    prefix: true,
+    description: "ask any thing",
+    category: "admin",
+    usages: "",
+    cooldowns: 5,
+    dependencies: {
+        "openai": ""
 };
 const totalPath = __dirname + '/cache/totalChat.json';
 const _24hours = 86400000;
