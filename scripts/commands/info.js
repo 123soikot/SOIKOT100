@@ -6,11 +6,11 @@
 module.exports.config = {
   name: "info",
   version: "1.2.6",
-  hasPermssion: 0,
+  permssion: 0,
   credits: "Nazrul",
   usePrefix: true,
   description: "info bot owner",
-  commandCategory: "Dành cho người dùng",
+  category: "Dành cho người dùng",
   hide:true,
   usages: "",
   cooldowns: 5,
@@ -90,7 +90,7 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
                 }
             }
     var callback = () => 
-      api.sendMessage({ body: `☘️𝗔𝘀𝘀𝗮𝗹𝗮𝗺𝘂 𝗔𝗹𝗮𝗶𝗸𝘂𝗺💫\n\n🖤ADMIN AND BOT INFORMATION🌻.\n\nBOT NAME: =====「${global.config.BOTNAME}」=====\n\n😇BOT OWNER OF CEO😇\n──────────────\n☘️Ex 卝 বয়ফ্রেন্ডヅㅤ모ㅤᏴꫝʙʏ💫 (Fu3k)\nFB I'd :- https://www.facebook.com/mdsakhoyat.hosen.9\n\n☘️Ex 卝 বয়ফ্রেন্ডヅ모ㅤᏴꫝʙʏ💫 (𝐁𝐫𝐚𝐧𝐝)\nFB I'D :- https://www.facebook.com/mdsakhoyat.hosen.9\n\nBOT PREFIX : ${global.config.PREFIX}\n\nBOT OWNER : 『☘Ex 卝 বয়ফ্রেন্ডヅㅤ모ㅤᏴꫝʙʏ💫 (𝑴𝒂𝒍𝒔)』\n\n➟ UPTIME\n\nTODAY IS TIME :\n\nBOT IS RUNNING ${hours}:${minutes}:${seconds}.\n\n➟  TOTAL USER : ${global.data.allUserID.length}\n\n➟ TOTAL THREADS : ${global.data.allThreadID.length}\n\nTHANKS FOR USING ${global.config.BOTNAME} 『🙅🖤』`, attachment: fs.createReadStream(__dirname + "/cache/kensu.jpg"), }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/kensu.jpg"));
+      api.sendMessage({ body: `☘️𝗔𝘀𝘀𝗮𝗹𝗮𝗺𝘂 𝗔𝗹𝗮𝗶𝗸𝘂𝗺💫\n\n🖤ADMIN AND BOT INFORMATION🌻.\n\nBOT NAME: =====「${global.config.BOTNAME}」=====\n\n😇BOT OWNER OF CEO😇\n──────────────\n☘️Ex 卝 বয়ফ্রেন্ডヅㅤ모ㅤᏴꫝʙʏ💫 (Fu3k)\nFB I'd :- https://www.facebook.com/mdsakhoyat.hosen.9\n\n☘️https://www.facebook.com/mdsakhoyat.hosen.9모ㅤᏴꫝʙʏ💫 (𝐁𝐫𝐚𝐧𝐝)\nFB I'D :- \n\nBOT PREFIX : ${global.config.PREFIX}https://www.facebook.com/mdsakhoyat.hosen.9\n\nBOT OWNER : 『☘SOIKOTㅤ모ㅤᏴꫝʙʏ💫 (𝑴𝒂𝒍𝒔)』\n\n➟ UPTIME\n\nTODAY IS TIME :\n\nBOT IS RUNNING ${hours}:${minutes}:${seconds}.\n\n➟  TOTAL USER : ${global.data.allUserID.length}\n\n➟ TOTAL THREADS : ${global.data.allThreadID.length}\n\nTHANKS FOR USING ${global.config.BOTNAME} 『🙅🖤』`, attachment: fs.createReadStream(__dirname + "/cache/kensu.jpg"), }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/kensu.jpg"));
       return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname + "/cache/kensu.jpg")).on("close", () => callback()); 
   }
 };
