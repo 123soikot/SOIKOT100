@@ -1,4 +1,4 @@
-  module.exports.config = {
+module.exports.config = {
 	name: "frame2",
 	version: "1.0.1", 
 	hasPermssion: 0,
@@ -11,8 +11,7 @@
     "request":"",
     "fs-extra":"",
     "axios":""
-  
-    }
+  }
 };
 
 module.exports.onLoad = async() => {
