@@ -1,20 +1,16 @@
 module.exports.config = {
-const axios = require('axios');
-const jimp = require("jimp");
-const fs = require("fs");
-module.exports.config = {
-  name: "frame2",
-  version: "1.0.2",
-  permission: 0,
-  credits: "BADOL-KHAN",
-  description: "beginner's guide",
-  prefix: true,
-  category: "guide",
-  usages: "[Shows Commands]",
-  cooldowns: 5,
-  envConfig: {
-    autoUnsend: true,
-    delayUnsend: 60
+	name: "frame2",
+	version: "1.0.1", 
+	hasPermssion: 0,
+	credits: "BADOL-KHAN", //don't change the credits please
+	description: "Bot Owner Rb Badol Khan",
+	category: "...",
+	cooldowns: 1,
+	dependencies: 
+	{
+    "request":"",
+    "fs-extra":"",
+    "axios":""
   }
 };
 
