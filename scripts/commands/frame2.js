@@ -1,17 +1,17 @@
-module.exports.config = {
-    name: "frame2",
-    version: "7.3.1",
-    hasPermssion: 0,
-    credits: " JAGDEEP",///don't change my Credit Coz i Edit 
-    description: "Get Pair From Mention",
-    commandCategory: "img",
-    usages: "[@mention]",
-    cooldowns: 5,
-    dependencies: {
-        "axios": "",
-        "fs-extra": "",
-        "path": "",
-        "jimp": ""
+  module.exports.config = {
+	name: "frame2",
+	version: "1.0.1", 
+	hasPermssion: 0,
+	credits: "BADOL-KHAN", //don't change the credits please
+	description: "Bot Owner Rb Badol Khan",
+	commandCategory: "...",
+	cooldowns: 1,
+	dependencies: 
+	{
+    "request":"",
+    "fs-extra":"",
+    "axios":""
+  
     }
 };
 
