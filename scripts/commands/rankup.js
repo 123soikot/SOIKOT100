@@ -2,25 +2,24 @@ const deltaNext = global.GoatBot.configCommands.envCommands.rank.deltaNext;
 const expToLevel = exp => Math.floor((1 + Math.sqrt(1 + 8 * exp / deltaNext)) / 2);
 const { drive } = global.utils;
 
-module.exports = {
-	config: {
-		name: "rankup",
-		version: "1.3",
-		author: "NTKhang",
-		countDown: 5,
-		role: 0,
-		description: {
-			vi: "Bật/tắt thông báo level up",
-			en: "Turn on/off level up notification"
-		},
-		category: "rank",
-		guide: {
-			en: "{pn} [on | off]"
-		},
-		envConfig: {
-			deltaNext: 5
-		}
-	},
+const axios = require('axios');
+const jimp = require("jimp");
+const fs = require("fs");
+module.exports.config = {
+  name: "rankup.js",
+  version: "1.0.2",
+  permission: 0,
+  credits: "BADOL-KHAN",
+  description: "beginner's guide",
+  prefix: true,
+  category: "guide",
+  usages: "[Shows Commands]",
+  cooldowns: 5,
+  envConfig: {
+    autoUnsend: true,
+    delayUnsend: 60
+  }
+};
 
 	langs: {
 		vi: {
