@@ -1,15 +1,15 @@
 const axios = require('axios');
 
 module.exports.config = {
-    name: "bby",
-    version: "1.0.0",
-    hasPermssion: 0,
-    credits: "EMon-BHai",
-    description: "Talk to sim",
-    prefix: false,
-    category: "sim",
-    usages: "[ask]",
-    cooldowns: 2,
+  name: "bby",
+  version: "2.0.0",
+  permission: 0,
+  credits: "Nayan",
+  description: "talk with baby and teach it",
+  prefix: false,
+  category: "system",
+  usages: "[any message] OR\nteach [YourMessage] - [Reply1] [Reply2], [Reply3]... OR\nremove [YourMessage] OR\nrm [YourMessage] - [indexNumber] OR\nmsg OR\nlist OR\nedit [YourMessage] - [NewReply]",
+  cooldowns: 5,
 };
 module.exports.run = async ({ api, event, args }) => {
 const link = "https://noobs-api.onrender.com/dipto/baby";
