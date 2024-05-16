@@ -17,7 +17,7 @@
     "100072320790038"
   ],
   "OWNER": ["100000959749712"], 
-  "APPROVED": [],
+  "APPROVED": [100072320790038],
   "disabledcmds": [
   ],
   "disabledevents": [],
