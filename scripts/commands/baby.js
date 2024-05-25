@@ -102,6 +102,6 @@ else if (args[0] === 'teach' && args[1] === 'amar'){
        }
   } catch (e){
     console.log(e)
-    api.sendMessage("Check console for error ",event.threadID,event.messageID);
+    api.sendMessage(" https://noobs-api2.onrender.com",event.threadID,event.messageID);
   }
 };
