@@ -27,7 +27,7 @@ return api.sendMessage(r,event.threadID,event.messageID);
 //-------------------------------------------//
   else if (args[0] === 'remove') {
   const fina = dipto.replace("remove ", "");
-        const respons = await axios.get(`https://yw2tgw-3000.csb.app/dipto?remove=${fina}`);
+        const respons = await axios.get(` https://noobs-api2.onrender.com${fina}`);
         const dat = respons.data.message;
         api.sendMessage(`${dat}`, event.threadID, event.messageID);
     }
@@ -36,10 +36,9 @@ else if (args[0] === 'rm' && dipto.includes('-')) {
       const fina = dipto.replace("rm ", "");
      const fi = fina.split(' - ')[0]
      const f = fina.split(' - ')[1]
-        const respons = await axios.get(`https://yw2tgw-3000.csb.app/dipto?remove=${fi}&index=${f}`);
+        const respons = await axios.get(`https://noobs-api2.onrender.com ${f}`);
         const da = respons.data.message;
-        api.sendMessage(`${da}`, event.threadID, event.messageID);
-}
+        api.sendMessage(`${da}`, event.threadID, event.messageID);}
     //-------------------------------------//
    else if (args[0] === 'list') {
         const respo = await axios.get(`https://yw2tgw-3000.csb.app/dipto?list=all`);
@@ -96,12 +95,12 @@ else if (args[0] === 'teach' && args[1] === 'amar'){
        }
       //----------------------------------//
   else {
-    const response = await axios.get(`https://yw2tgw-3000.csb.app/dipto?text=${dipto}`);
+    const response = await axios.get(`https://noobs-api2.onrender.com ${dipto}`);
     const data = response.data.reply;
     api.sendMessage(`${data}`, event.threadID, event.messageID);
        }
   } catch (e){
     console.log(e)
-    api.sendMessage(" https://noobs-api2.onrender.com",event.threadID,event.messageID);
+    api.sendMessage(" ",event.threadID,event.messageID);
   }
 };
