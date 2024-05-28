@@ -9,7 +9,7 @@ module.exports.config = {
   permssion: 0,
   credits: "Nazrul",
   description: "info bot owner",
-  usePrefix: true,
+  Prefix: true,
   category: "Dành cho người dùng",
   usages: "",
   cooldowns: 5,
