@@ -10,8 +10,6 @@ module.exports.config = {
     cooldowns: 2,
 }
 
-}
-
 module.exports.run = async function({ api, args, Users, event}) {
     var mention = Object.keys(event.mentions)[0];
     if(!mention) return api.sendMessage("আপনি কাকে জ্ঞান দিতে চান এমন 1 জনকে @ম্যানশন করতে হবে", event.threadID);
