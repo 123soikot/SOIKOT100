@@ -8,7 +8,7 @@ module.exports.config = {
     category: "",
     usages: "[ask]",
     cooldowns: 2,
-};
+}
 
 }
 
