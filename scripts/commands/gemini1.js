@@ -14,7 +14,7 @@ module.exports.config = {
   description: "gemini ai with multiple conversation",
   usePrefix: true,
   usages: "[message]",
-  Category: "Ai",
+  category: "Ai",
   coolddowns: 5,
 };
 module.exports.handleReply = async function ({ api, event, handleReply }) {
