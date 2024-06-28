@@ -12,7 +12,7 @@ module.exports.config = {
   hasPremssion: 0,
   credits: "dipto",
   description: "gemini ai with multiple conversation",
-  usePrefix: true,
+  usePrefix: false,
   usages: "[message]",
   category: "Ai",
   coolddowns: 5,
