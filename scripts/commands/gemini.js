@@ -9,10 +9,10 @@ const baseApiUrl = async () => {
 module.exports.config = {
   name: "gemini",
   version: "1.0.0",
-  hasPremssion: 0,
+  premssion: 0,
   credits: "dipto",
   description: "gemini ai with multiple conversation",
-  usePrefix: false,
+  prefix: 'awto',
   usages: "[message]",
   category: "Ai",
   coolddowns: 5,
