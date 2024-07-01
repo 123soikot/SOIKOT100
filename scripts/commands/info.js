@@ -2,10 +2,10 @@ module.exports.config = {
 	name: "info",
 	version: "1.0.1", 
 	permssion: 0,
-	credits: "EMon-BHai", //don't change the credits please
-	prefix: false,
+	credits: "Emon",
+	prefix: true,
 	description: "Admin and Bot info.",
-	category: "admin",
+	category: "...",
 	cooldowns: 1,
 	dependencies: 
 	{
@@ -23,33 +23,41 @@ const time = process.uptime(),
 		minutes = Math.floor((time % (60 * 60)) / 60),
 		seconds = Math.floor(time % 60);
 const moment = require("moment-timezone");
-var juswa = moment.tz("Asia/Dhaka").format("『D/MM/YYYY』 【hh:mm:ss】");
-var link = ["https://i.postimg.cc/DwGsBmj9/received-2142950486054658.png", 
-            
-            "https://i.postimg.cc/DwGsBmj9/received-2142950486054658.png", 
-            
-            "https://i.postimg.cc/DwGsBmj9/received-2142950486054658.png",
-            
-            "https://i.postimg.cc/DwGsBmj9/received-2142950486054658.png"];
-  
-var callback = () => api.sendMessage({body:`ADMIN AND BOT INFORMATION 
+var juswa = moment.tz("Asia/Dhaka").format("『D/MM/YYYY』 【HH:mm:ss】");
+var link =                                     
+["https://i.imgur.com/UrbBKz7.jpeg "];
+var callback = () => api.sendMessage({body:` ╾━╤デ╦︻(▀̿Ĺ̯▀̿ ̿ পরিচয় পর্ব শুরু করা যাক 🇮
+(⌐▀͡ ̯ʖ▀)︻̷┻̿═━一-
 
-BOT NAME : ${global.config.BOTNAME}
+☄️Bot Name︎︎︎☄️  ${global.config.BOTNAME}
 
-BOT ADMIN : 『Ex 卝 বয়ফ্রেন্ডヅ 』
+🔥আমার নাম🔥! ☞︎︎︎☜︎︎︎✰সৈকত(Ex 卝 বয়ফ্রেন্ডヅ) 💔🥀
 
-FACEBOOK  : https://www.facebook.com/mdsakhoyat.hosen.9 
+🙈আমার ফ্রেসবুক  facebook id link🙈➪ https://www.facebook.com/mdsakhoyat.hosen.9 💞🕊️
 
-BOT PREFIX : ${global.config.PREFIX}
+👋যেকোন সাহায্য জন্য sms করুন 100072320790038 number. 01758307316
 
-BOT OWNER : 『SOIKOT』 
+✧══════•❁❀❁•══════✧
 
-➟ UPTIME
+🌸Bot Prefix🌸☞︎︎︎☜︎︎︎✰ ${global.config.PREFIX}
 
-TODAY IS TIME : ${juswa} 
+♥️Bot Owner♥️ ☞︎︎︎☜︎︎︎✰ Ex 卝 বয়ফ্রেন্ডヅ 
 
-BOT IS RUNNING ${hours}:${minutes}:${seconds}.
+🥳UPTIME🥳
 
-THANKS FOR USING ${global.config.BOTNAME} 『🙅🖤』`,attachment: fs.createReadStream(__dirname + "/cache/juswa.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/juswa.jpg")); 
+🌪️Today is🌪️ ☞︎︎︎☜︎︎︎✰ ${juswa} 
+
+⚡Bot is running⚡ ${hours}:${minutes}:${seconds}.
+
+✅Thanks for using ${global.config.BOTNAME} Bot🖤
+
+
+🦢🍒•••বটের  ɮ❍┼ এডমিন •••🌷💞
+┏━🕊️━━°❀•°:🎀🧸💙🧸🎀:°•❀°━━💞━┓
+🌸✦✧✧✧✧✰🍒Ex 卝 বয়ফ্রেন্ডヅ 🌿✰✧✧✧✧✦🌸
+┗━🕊️━━°❀•°:🎀🧸💙🧸🎀:°•❀°━━💞━┛
+
+
+`,attachment: fs.createReadStream(__dirname + "/cache/juswa.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/juswa.jpg")); 
       return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/juswa.jpg")).on("close",() => callback());
    };
