@@ -35,7 +35,7 @@ module.exports.config = {
   hasPermssion: 0,
   credits: "dipto",
   description: "better than all Sim simi",
-  Prefix: true,
+  prefix: true,
   category: "ChatBots",
   cooldowns: 5,
 };
