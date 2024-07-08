@@ -13,7 +13,7 @@ module.exports.config = {
   hasPermssion: 0,
   credits: "Dipto",
   description: "Facebook cover",
-  usePrefix: true,
+  Prefix: true,
   category: "Cover",
   usages: "name - title - address - email - phone - color (default = white)",
   cooldowns: 5,
