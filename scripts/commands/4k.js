@@ -47,7 +47,7 @@ const res = await upscale(content, model)
   ).data;
 
         {
-            msg += `✅HERE YOUR PHOTO`
+            msg += `✅এই নেন বস আপনার 4k ছবি`
         }
 
         return api.sendMessage({
