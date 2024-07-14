@@ -7,7 +7,7 @@
   "notification": true,
   "approval": false,
   "BOTNAME": "Ex ",
-  "PREFIX": "/",
+  "PREFIX": ".",
   "OPERATOR": [
     "100072320790038",
     "100000959749712"
