@@ -5,7 +5,6 @@ module.exports.config = {
     credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
     description: "War In Chatbox",
     Prefix: true,
-    usePrefix: true,
     category: "wargroup",
     usages: "[fyt]",
     cooldowns: 7,
