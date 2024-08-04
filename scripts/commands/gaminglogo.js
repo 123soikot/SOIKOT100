@@ -5,7 +5,7 @@
   credits: "MrTomXxX",
   prefix:true,
    description: "Gaming Logo maker",
-  commandCategory: "Utilities",
+   category: "Utilities",
   usages: "[text]",
   cooldowns: 5
 };
