@@ -4,7 +4,7 @@ module.exports.config = {
   hasPermssion: 0,
   credits: "Mirai Team",
   description: "Random ảnh girl",
- Category: "random-img",
+ category: "random-img",
  prefix: 'awto',
  usages: "gái",
   cooldowns: 5,
