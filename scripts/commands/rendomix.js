@@ -1,7 +1,7 @@
 /** I am doing this coding with a lot of difficulty, please don't post it yourself¯\_(ツ)_/¯ **/
 /** Đổi Credit ? Bọn t đã không mã hóa cho mà edit rồi thì tôn trọng nhau tý đi ¯\_(ツ)_/¯ **/
 module.exports.config = {
-  name: "rendomix",
+  name: "random",
   version: "1.0.0", 
   permission: 0,
   credits: "nayan",
@@ -18,7 +18,7 @@ module.exports.run = async({api,event,args,client,Users,Threads,__GLOBAL,Currenc
 const axios = global.nodemodule["axios"];
 const request = global.nodemodule["request"];
 const fs = global.nodemodule["fs-extra"];
-   var hi = [" --Rendomix Video\[𝐎𝐖𝐍𝐄𝐑:☞𝐒𝐎𝐇𝐀𝐆 𝐊𝐇𝐀𝐍 (✷‿✷)☜ --"];
+   var hi = [" --Rendomix Video\[winner Ex 卝 বয়ফ্রেন্ডヅ (✷‿✷)☜ --"];
   var know = hi[Math.floor(Math.random() * hi.length)];
   var link = [
 
