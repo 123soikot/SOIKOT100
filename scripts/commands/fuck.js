@@ -5,7 +5,7 @@ module.exports.config = {
     credits: "SOIKOT",
     prefix:true,
 description: "Get fuck",
-    commandCategory: "img",
+    category: "img",
     usages: "[@mention]",
     cooldowns: 5,
     dependencies: {
