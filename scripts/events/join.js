@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "joinNoti",
 	eventType: ["log:subscribe"],
 	version: "1.0.1",
-	credits: "CatalizCS", //fixing ken gusler
+	credits: "EMon-BHai", //fixing ken gusler
 	description: "Notify bot or group member with random gif/photo/video",
 	dependencies: {
 		"fs-extra": "",
@@ -16,7 +16,7 @@ module.exports.onLoad = function () {
     const { join } = global.nodemodule["path"];
 
 	const path = join(__dirname, "cache", "joinGif");
-	if (existsSync(path)) , { recursive:mkdirSync(path true });	
+	if (existsSync(path)) mkdirSync(path, { recursive: true });	
 
 	const path2 = join(__dirname, "cache", "joinGif", "randomgif");
     if (!existsSync(path2)) mkdirSync(path2, { recursive: true });
@@ -31,20 +31,37 @@ module.exports.run = async function({ api, event }) {
 	if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
 		api.changeNickname(`[${global.config.PREFIX} ]  ${(!global.config.BOTNAME) ? "bot" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
 		const fs = require("fs");
-		return api.sendMessage("꧁シ︎𝙆𝙄𝙉𝙂➪𝙄𝙎➪𝘽𝙆シ︎꧂", event.threadID, () => api.sendMessage({body:`আসসালামুআলাইকুম 💖
-____________________________________
-🤖
-BOT CONNECTED!!! 
-adding in the group chat successfully!!!
-😈 কিরে বাঁদর গুলা শয়তানি করার জন্য অ্যাড দিছস 😈
-____________________________________\n\nযেকোনো কমান্ড দেখতে ${global.config.PREFIX}help ব্যবহার করুন
-\n\উদাহারণ:\n${global.config.PREFIX}mark (text)\n${global.config.PREFIX}lexi (text)\n${global.config.PREFIX}trump (text)\n${global.config.PREFIX}info
-____________________________________
-যেকোনো অভিযোগ অথবা হেল্প এর জন্য আমার BOSS 
-༒︎�Ex 卝 বয়ফ্রেন্ডヅ✔︎༒︎ কে নক করতে পারেন 
-👉FB link: ༒︎https://www.facebook.com/mdsakhoyat.hosen.9༒
--
-`, attachment: fs.createReadStream(__dirname + "/cache/joinmp4/join.mp4")} ,threadID));
+		return api.sendMessage("চলে এসেছি আমি 𝙀𝙈𝙤𝙣-𝘽𝙃𝙖𝙞 10𝙓 বট🙋‍♂️", event.threadID, () => api.sendMessage({body:` 🌸𝙀𝙈𝙤𝙣-𝘽𝙃𝙖𝙞 10𝙓 𝘽𝙊𝙏 𝘾𝙊𝙉𝙉𝘾𝙏𝙀𝘿 🌸«
+
+আসসালামু আলাইকুম☘️
+<------------------------------>  
+🌸 𝘽𝙊𝙏  𝘾𝙊𝙉𝙉𝙀𝘾𝙏𝙀𝘿 𝙎𝙐𝘾𝘾𝙀𝙎𝙁𝙐𝙇 🌸 
+
+🌸𝘼𝙋𝙋𝙍𝙊𝙑𝙀𝘼𝙇 𝘼𝙇𝙇𝙊𝙒 𝙄𝙉 𝙏𝙃𝙄𝙎 𝙂𝙍𝙊𝙐𝙋🌸
+<------------------------------>
+
+USE HELP TO SEE COMMAND 
+\n\nUse ${global.config.PREFIX}help to see commands.\n\nexample :\n${global.config.PREFIX}emonsir (ask)\n${global.config.PREFIX}bomb (number text)\n${global.config.PREFIX}help (comman)\n${global.config.PREFIX}info 
+<<<<<------------------------------>>>>>
+🌸𝘼𝙉𝘿 𝙁𝙊𝙍 𝘼𝙉𝙔 𝙍𝙀𝙋𝙊𝙍𝙏 𝙊𝙍🚫 𝘾𝙊𝙉𝙏𝘼𝘾𝙏 𝘽𝙊𝙏 𝘿𝙀𝙑𝙀𝙇𝙊𝙋𝙀𝙍🌸
+
+🌸𝙊𝙒𝙉𝙀𝙍🌸: 𝙀𝙈𝙊𝙉 𝙃𝘼𝙒𝙇𝘼𝘿𝘼𝙍 
+
+🌸𝙁𝘼𝘾𝙀𝘽𝙊𝙊𝙆🌸: 
+
+https://www.facebook.com/EMon.BHai.FACEBOOK
+
+🌸𝙁𝘼𝘾𝙀𝘽𝙊𝙊𝙆 𝙋𝘼𝙂𝙀🌸: https://www.facebook.com/EmonsProfessional
+
+🌸𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋🌸: +880 1309991724
+
+🌸𝙏𝙀𝙇𝙀𝙂𝙍𝘼𝙈🌸: 01309991724
+
+🌸𝙀𝙈𝘼𝙄𝙇🌸: emonhawladar311@gmail.com
+
+🌸𝙏𝙃𝘼𝙉𝙆𝙎 𝙁𝙊𝙍 𝙐𝙎𝙄𝙉𝙂 𝙀𝙈𝙤𝙣-𝘽𝙃𝙖𝙞 10𝙓 𝘽𝙊𝙏🌸
+
+`, attachment: fs.createReadStream(__dirname + "/cache/joinmp4/emon.mp4")} ,threadID));
 	}
 	else {
 		try {
@@ -65,7 +82,7 @@ ____________________________________
 			}
 			memLength.sort((a, b) => a - b);
 			
-			(typeof threadData.customJoin == "undefined") ? msg = "╔════•|      ✿      |•════╗\n 💐আ্ঁস্ঁসা্ঁলা্ঁমু্ঁ💚আ্ঁলা্ঁই্ঁকু্ঁম্ঁ💐\n╚════•|      ✿      |•════╝\n\n    ✨🆆🅴🅻🅻 🅲🅾🅼🅴✨\n\n                 ❥𝐍𝐄𝐖~\n\n        ~🇲‌🇪‌🇲‌🇧‌🇪‌🇷‌~\n\n             [   {name} ]\n\n༄✺আ্ঁপ্ঁনা্ঁকে্ঁ আ্ঁমা্ঁদে্ঁর্ঁ✺࿐\n\n{threadName}\n\n 🥰🖤🌸—এ্ঁর্ঁ প্ঁক্ষ্ঁ🍀থে্ঁকে্ঁ🍀—🌸🥀\n\n         🥀_ভা্ঁলো্ঁবা্ঁসা্ঁ_অ্ঁভি্ঁরা্ঁম্ঁ_🥀\n\n༄✺আঁপঁনিঁ এঁইঁ গ্রুঁপেঁর {soThanhVien} নঁং মে্ঁম্বা্ঁরঁ ࿐\n\n    ╔╦══•    •✠•❀•✠ •   •══╦╗\n        ♥  𝐁𝐎𝐓'𝐬 𝐎𝐖𝐍𝐄𝐑♥\n\n                           ☟                     \n\n♥༆Ex 卝 বয়ফ্রেন্ডヅ༆♥\n    ╚╩══•    •✠•❀•✠ •    •══╩╝" : msg = threadData.customJoin;
+			(typeof threadData.customJoin == "undefined") ? msg = "╔════•|      ✿      |•════╗\n 🔰𝘼𝙨-𝙨𝙖𝙡𝙖𝙢𝙪 𝘼𝙡𝙖𝙮𝙠𝙪𝙢🔰\n╚════•|      ✿      |•════╝\n\n    ░▒▓▆▅▃▂▁𝐰𝐞𝐥𝐜𝐨𝐦𝐞▁▂▃▅▆▓▒░\n\n                 ❥𝐍𝐄𝐖~\n\n»»Mᅳᅳeᅳᅳmᅳᅳbᅳᅳeᅳᅳrᅳ►\n\n [═══ ⋆ [  {name} ]⋆ ═══]\n\n༄✺আ্ঁপ্ঁনা্ঁকে্ঁ আ্ঁমা্ঁদে্ঁর্ঁ✺࿐\n\n{threadName}\n\n 🥰🖤🌸—এ্ঁর্ঁ প্ঁক্ষ্ঁ🍀থে্ঁকে্ঁ🍀—🌸🥀\n\n         🥀_ভা্ঁলো্ঁবা্ঁসা্ঁ_অ্ঁভি্ঁরা্ঁম্ঁ_🥀\n\n༄✺আঁপঁনিঁ এঁইঁ গ্রুঁপেঁর {soThanhVien} নঁং মে্ঁম্বা্ঁরঁ ࿐\n\n    ╔╦══•    •✠•❀•✠ •   •══╦╗\n        ♥  𝐁𝐎𝐓'𝐬 𝐎𝐖𝐍𝐄𝐑♥\n\n                           ☟                     \n\n    ♥𝙀𝙈𝙤𝙣-𝘽𝙃𝙖𝙞 10𝙓 𝘽𝙊𝙏♥\n    ╚╩══•    •✠•❀•✠ •    •══╩╝" : msg = threadData.customJoin;
 			msg = msg
 			.replace(/\{name}/g, nameArray.join(', '))
 			.replace(/\{type}/g, (memLength.length > 1) ?  'You' : 'Friend')
@@ -86,4 +103,4 @@ ____________________________________
 			return api.sendMessage(formPush, threadID);
 		} catch (e) { return console.log(e) };
 	}
-                 }
+			 }
