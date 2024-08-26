@@ -27,7 +27,7 @@ module.exports.run = async function({ api, event, Threads }) {
             break;
         }
         case "log:subscribe": {
-            if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) task = "the user added the bot to a new group";
+            if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) task= সদস্য গ্রুপে উপস্থিত করা হয়েছে চেক করুন ";
             break;
         }
         case "log:unsubscribe": {
