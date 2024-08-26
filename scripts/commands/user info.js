@@ -8,7 +8,7 @@ module.exports.config = {
    hasPermission: 1,
    usePrefix: false,
    description: "Retrieve information about a user on Facebook.",
-   commandCategory: "Info",
+   category: "Info",
    usage: "/userinfo <@mention or reply to a message of the user>",
    cooldowns: 1,
 };
