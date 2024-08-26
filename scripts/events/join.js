@@ -31,7 +31,7 @@ module.exports.run = async function({ api, event }) {
 	if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
 		api.changeNickname(`[${global.config.PREFIX} ]  ${(!global.config.BOTNAME) ? "bot" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
 		const fs = require("fs");
-		return api.sendMessage("চলে এসেছি আমি 𝙀𝙈𝙤𝙣-𝘽𝙃𝙖𝙞 10𝙓 বট🙋‍♂️", event.threadID, () => api.sendMessage({body:` 🌸𝙀𝙈𝙤𝙣-𝘽𝙃𝙖𝙞 10𝙓 𝘽𝙊𝙏 𝘾𝙊𝙉𝙉𝘾𝙏𝙀𝘿 🌸«
+		return api.sendMessage("চলে এসেছি আমি Ex 10𝙓 বট🙋‍♂️", event.threadID, () => api.sendMessage({body:` 🌸(-Ex 卝 বয়ফ্রেন্ডヅ) সৈকত 𝙞 Ex 10𝙓 𝘽𝙊𝙏 𝘾𝙊𝙉𝙉𝘾𝙏𝙀𝘿 🌸«
 
 আসসালামু আলাইকুম☘️
 <------------------------------>  
@@ -45,21 +45,21 @@ USE HELP TO SEE COMMAND
 <<<<<------------------------------>>>>>
 🌸𝘼𝙉𝘿 𝙁𝙊𝙍 𝘼𝙉𝙔 𝙍𝙀𝙋𝙊𝙍𝙏 𝙊𝙍🚫 𝘾𝙊𝙉𝙏𝘼𝘾𝙏 𝘽𝙊𝙏 𝘿𝙀𝙑𝙀𝙇𝙊𝙋𝙀𝙍🌸
 
-🌸𝙊𝙒𝙉𝙀𝙍🌸: 𝙀𝙈𝙊𝙉 𝙃𝘼𝙒𝙇𝘼𝘿𝘼𝙍 
+🌸𝙊𝙒𝙉𝙀𝙍🌸: Ex 卝 বয়ফ্রেন্ডヅ 
 
-🌸𝙁𝘼𝘾𝙀𝘽𝙊𝙊𝙆🌸: 
+🌸𝙁𝘼𝘾𝙀𝘽𝙊𝙊𝙆🌸: https://www.facebook.com/mdsakhoyat.hosen.9
 
-https://www.facebook.com/EMon.BHai.FACEBOOK
 
-🌸𝙁𝘼𝘾𝙀𝘽𝙊𝙊𝙆 𝙋𝘼𝙂𝙀🌸: https://www.facebook.com/EmonsProfessional
 
-🌸𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋🌸: +880 1309991724
+🌸𝙁𝘼𝘾𝙀𝘽𝙊𝙊𝙆 𝙋𝘼𝙂𝙀🌸: https://www.facebook.com/mdsakhoyat.hosen.9
 
-🌸𝙏𝙀𝙇𝙀𝙂𝙍𝘼𝙈🌸: 01309991724
+🌸𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋🌸: 01758307316
 
-🌸𝙀𝙈𝘼𝙄𝙇🌸: emonhawladar311@gmail.com
+🌸𝙏𝙀𝙇𝙀𝙂𝙍𝘼𝙈🌸: 01866523794
 
-🌸𝙏𝙃𝘼𝙉𝙆𝙎 𝙁𝙊𝙍 𝙐𝙎𝙄𝙉𝙂 𝙀𝙈𝙤𝙣-𝘽𝙃𝙖𝙞 10𝙓 𝘽𝙊𝙏🌸
+🌸𝙀𝙈𝘼𝙄𝙇🌸: bdsoikotho@gmail.com
+
+🌸𝙏𝙃𝘼𝙉𝙆𝙎 𝙁𝙊𝙍 𝙐𝙎𝙄𝙉𝙂 ?(Ex 卝 বয়ফ্রেন্ডヅ) ex10𝙓 𝘽𝙊𝙏🌸
 
 `, attachment: fs.createReadStream(__dirname + "/cache/joinmp4/emon.mp4")} ,threadID));
 	}
@@ -82,7 +82,7 @@ https://www.facebook.com/EMon.BHai.FACEBOOK
 			}
 			memLength.sort((a, b) => a - b);
 			
-			(typeof threadData.customJoin == "undefined") ? msg = "╔════•|      ✿      |•════╗\n 🔰𝘼𝙨-𝙨𝙖𝙡𝙖𝙢𝙪 𝘼𝙡𝙖𝙮𝙠𝙪𝙢🔰\n╚════•|      ✿      |•════╝\n\n    ░▒▓▆▅▃▂▁𝐰𝐞𝐥𝐜𝐨𝐦𝐞▁▂▃▅▆▓▒░\n\n                 ❥𝐍𝐄𝐖~\n\n»»Mᅳᅳeᅳᅳmᅳᅳbᅳᅳeᅳᅳrᅳ►\n\n [═══ ⋆ [  {name} ]⋆ ═══]\n\n༄✺আ্ঁপ্ঁনা্ঁকে্ঁ আ্ঁমা্ঁদে্ঁর্ঁ✺࿐\n\n{threadName}\n\n 🥰🖤🌸—এ্ঁর্ঁ প্ঁক্ষ্ঁ🍀থে্ঁকে্ঁ🍀—🌸🥀\n\n         🥀_ভা্ঁলো্ঁবা্ঁসা্ঁ_অ্ঁভি্ঁরা্ঁম্ঁ_🥀\n\n༄✺আঁপঁনিঁ এঁইঁ গ্রুঁপেঁর {soThanhVien} নঁং মে্ঁম্বা্ঁরঁ ࿐\n\n    ╔╦══•    •✠•❀•✠ •   •══╦╗\n        ♥  𝐁𝐎𝐓'𝐬 𝐎𝐖𝐍𝐄𝐑♥\n\n                           ☟                     \n\n    ♥𝙀𝙈𝙤𝙣-𝘽𝙃𝙖𝙞 10𝙓 𝘽𝙊𝙏♥\n    ╚╩══•    •✠•❀•✠ •    •══╩╝" : msg = threadData.customJoin;
+			(typeof threadData.customJoin == "undefined") ? msg = "╔════•|      ✿      |•════╗\n 🔰𝘼𝙨-𝙨𝙖𝙡𝙖𝙢𝙪 𝘼𝙡𝙖𝙮𝙠𝙪𝙢🔰\n╚════•|      ✿      |•════╝\n\n    ░▒▓▆▅▃▂▁𝐰𝐞𝐥𝐜𝐨𝐦𝐞▁▂▃▅▆▓▒░\n\n                 ❥𝐍𝐄𝐖~\n\n»»Mᅳᅳeᅳᅳmᅳᅳbᅳᅳeᅳᅳrᅳ►\n\n [═══ ⋆ [  {name} ]⋆ ═══]\n\n༄✺আ্ঁপ্ঁনা্ঁকে্ঁ আ্ঁমা্ঁদে্ঁর্ঁ✺࿐\n\n{threadName}\n\n 🥰🖤🌸—এ্ঁর্ঁ প্ঁক্ষ্ঁ🍀থে্ঁকে্ঁ🍀—🌸🥀\n\n         🥀_ভা্ঁলো্ঁবা্ঁসা্ঁ_অ্ঁভি্ঁরা্ঁম্ঁ_🥀\n\n༄✺আঁপঁনিঁ এঁইঁ গ্রুঁপেঁর {soThanhVien} নঁং মে্ঁম্বা্ঁরঁ ࿐\n\n    ╔╦══•    •✠•❀•✠ •   •══╦╗\n        ♥  𝐁𝐎𝐓'𝐬 𝐎𝐖𝐍𝐄𝐑♥\n\n                           ☟                     \n\n    ♥Ex 卝 বয়ফ্রেন্ডヅ 10𝙓 𝘽𝙊𝙏♥\n    ╚╩══•    •✠•❀•✠ •    •══╩╝" : msg = threadData.customJoin;
 			msg = msg
 			.replace(/\{name}/g, nameArray.join(', '))
 			.replace(/\{type}/g, (memLength.length > 1) ?  'You' : 'Friend')
