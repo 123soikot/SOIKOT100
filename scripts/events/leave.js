@@ -1,9 +1,13 @@
-module.exports.config = {
+msg.exports.config = {
 	name: "leave",
 	eventType: ["log:unsubscribe"],
 	version: "1.0.0",
-	credits: "Nayan",
-	description: "notify leave.",
+	credits: "Mirai Team",
+	description: "Thông báo bot hoặc người rời khỏi nhóm",
+	dependencies: {
+		"fs-extra": "",
+		"path": ""
+	}
 };
 
 module.exports.run = async function({ api, event, Users, Threads }) {
@@ -13,18 +17,18 @@ module.exports.run = async function({ api, event, Users, Threads }) {
 	const { threadID } = event;
 	const data = global.data.threadData.get(parseInt(threadID)) || (await Threads.getData(threadID)).data;
 	const name = global.data.userName.get(event.logMessageData.leftParticipantFbId) || await Users.getNameUser(event.logMessageData.leftParticipantFbId);
-	const type = (event.author == event.logMessageData.leftParticipantFbId) ? "লিভ নেউয়ার জন্য ধন্যবাদ 🤢" : "Kicked by Administrator";
-	const path = join(__dirname, "nayan", "leaveGif");
-	const gifPath = join(path, `l.gif`);
+	const type = (event.author == event.logMessageData.leftParticipantFbId) ? " তোর এত বড় সাহস আমি ミ★ Kawsar ★彡 বট থাকতে লিভ নিবি 😹" : "বাল পাকনামির কারণে কিক খাইলো🤧";
+	const path = join(__dirname, "cache", "leaveGif");
+	const gifPath = join(path, `lift.mp4`);
 	var msg, formPush
 
 	if (existsSync(path)) mkdirSync(path, { recursive: true });
 
-	(typeof data.customLeave == "undefined") ? msg = "তুই {name} গ্রুপে থাকার যোগ্য না আবাল .\n\n{type} " : msg = data.customLeave;
+	(typeof data.customLeave == "undefined") ? msg = "ইস {name} {type} 🤖." : msg = data.customLeave;
 	msg = msg.replace(/\{name}/g, name).replace(/\{type}/g, type);
 
 	if (existsSync(gifPath)) formPush = { body: msg, attachment: createReadStream(gifPath) }
-	else formPush = { body: msg }
+	else formPush = { body:  }
 	
 	return api.sendMessage(formPush, threadID);
-}
+		}
