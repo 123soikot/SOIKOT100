@@ -3,7 +3,7 @@ module.exports.config = {
   version: "1.0.0",
   hasPermssion: 0,
   credits: "Ex 卝 বয়ফ্রেন্ডヅ",
-  prefix,true,
+  prefix:true,
   description: "given prefix detail",
   coategory: "Dành cho Admin",
   usages: "",
