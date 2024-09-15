@@ -5,7 +5,7 @@ module.exports.config = {
   credits: "Ex 卝 বয়ফ্রেন্ডヅ",
   prefix:true,
   description: "given prefix detail",
-  coategory: "Dành cho Admin",
+  category: "Dành cho Admin",
   usages: "",
   cooldowns: 5,
 };
