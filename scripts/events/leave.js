@@ -1,34 +1,58 @@
-msg.exports.config = {
-	name: "leave",
-	eventType: ["log:unsubscribe"],
-	version: "1.0.0",
-	credits: "Mirai Team",
-	description: "Thông báo bot hoặc người rời khỏi nhóm",
-	dependencies: {
-		"fs-extra": "",
-		"path": ""
-	}
+module.exports.config = {
+  name: "leave",
+  eventType: ["log:unsubscribe"],
+  version: "1.0.0",
+  credits: "Jahid Hasan Rajib",
+  description: "Notify the Bot or the person leaving the group with a random gif/photo/video",
+  dependencies: {
+    "fs-extra": "",
+    "path": ""
+  }
 };
 
+module.exports.onLoad = function () {
+    const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
+    const { join } = global.nodemodule["path"];
+
+  const path = join(__dirname, "cache", "leaveGif", "randomgif");
+  if (existsSync(path)) mkdirSync(path, { recursive: true });	
+
+  const path2 = join(__dirname, "cache", "leaveGif", "randomgif");
+    if (!existsSync(path2)) mkdirSync(path2, { recursive: true });
+
+    return;
+}
+
 module.exports.run = async function({ api, event, Users, Threads }) {
-	if (event.logMessageData.leftParticipantFbId == api.getCurrentUserID()) return;
-	const { createReadStream, existsSync, mkdirSync } = global.nodemodule["fs-extra"];
-	const { join } =  global.nodemodule["path"];
-	const { threadID } = event;
-	const data = global.data.threadData.get(parseInt(threadID)) || (await Threads.getData(threadID)).data;
-	const name = global.data.userName.get(event.logMessageData.leftParticipantFbId) || await Users.getNameUser(event.logMessageData.leftParticipantFbId);
-	const type = (event.author == event.logMessageData.leftParticipantFbId) ? " তোর এত বড় সাহস আমি ミ★ Kawsar ★彡 বট থাকতে লিভ নিবি 😹" : "বাল পাকনামির কারণে কিক খাইলো🤧";
-	const path = join(__dirname, "cache", "leaveGif");
-	const gifPath = join(path, `lift.mp4`);
-	var msg, formPush
+  if (event.logMessageData.leftParticipantFbId == api.getCurrentUserID()) return;
+  const { createReadStream, existsSync, mkdirSync, readdirSync } = global.nodemodule["fs-extra"];
+  const { join } =  global.nodemodule["path"];
+  const { threadID } = event;
+  const moment = require("moment-timezone");
+  const time = moment.tz("Asia/Dhaka").format("DD/MM/YYYY || HH:mm:s");
+  const hours = moment.tz("Asia/Dhaka").format("HH");
+  const data = global.data.threadData.get(parseInt(threadID)) || (await Threads.getData(threadID)).data;
+  const name = global.data.userName.get(event.logMessageData.leftParticipantFbId) || await Users.getNameUser(event.logMessageData.leftParticipantFbId);
+  const type = (event.author == event.logMessageData.leftParticipantFbId) ? "leave" : "managed";
+  const path = join(__dirname, "events", "123.mp4");
+  const pathGif = join(path, `${threadID}123.mp4`);
+  var msg, formPush
 
-	if (existsSync(path)) mkdirSync(path, { recursive: true });
+  if (existsSync(path)) mkdirSync(path, { recursive: true });
 
-	(typeof data.customLeave == "undefined") ? msg = "ইস {name} {type} 🤖." : msg = data.customLeave;
-	msg = msg.replace(/\{name}/g, name).replace(/\{type}/g, type);
+(typeof data.customLeave == "undefined") ? msg = "•—»✨ {name} ✨«—•\n ╭•┄┅═══❁🌺❁═══┅┄•╮ \n         ｢ 𝗔𝗟𝗟𝗔𝗛𝗔𝗙𝗘𝗭 ｣     \n ╰•┄┅═══❁🌺❁═══┅┄•╯ \n  •—»✨       {type}  ✨«—•\n\n•—»✨ Janu আমাকে ছেড়ে চলে যাচ্ছো ✨«—•  \n\n•—»✨ {name} ✨«—•\n\nযেখানে যাও ভালো থাকো\n\n খোদা হাফেজ _//💙🥺-!! {session} || {time}" : msg = data.customLeave;
+  msg = msg.replace(/\{name}/g, name).replace(/\{type}/g, type).replace(/\{session}/g, hours <= 10 ? "leave time" : 
+    hours > 10 && hours <= 12 ? "__" :
+    hours > 12 && hours <= 18 ? "__" : "__").replace(/\{time}/g, time);  
 
-	if (existsSync(gifPath)) formPush = { body: msg, attachment: createReadStream(gifPath) }
-	else formPush = { body:  }
-	
-	return api.sendMessage(formPush, threadID);
-		}
+  const randomPath = readdirSync(join(__dirname, "cache", "leaveGif", "randomgif"));
+
+  if (existsSync(pathGif)) formPush = { body: msg, attachment: createReadStream(pathGif) }
+  else if (randomPath.length != 0) {
+    const pathRandom = join(__dirname, "cache", "leaveGif", "randomgif",`${randomPath[Math.floor(Math.random() * randomPath.length)]}`);
+    formPush = { body: msg, attachment: createReadStream(pathRandom) }
+  }
+  else formPush = { body: msg }
+
+  return api.sendMessage(formPush, threadID);
+	  }
