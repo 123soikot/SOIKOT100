@@ -1,60 +1,40 @@
-const dipto = require('axios');
-const fs = require('fs-extra');
-const path = require('path');
-const moment = require('moment-timezone');
-const pathFile = __dirname + '/cache/d1pt0.txt';
-if (!fs.existsSync(pathFile))
-  fs.writeFileSync(pathFile, 'true');
-  const isEnable = fs.readFileSync(pathFile, 'utf-8');
 module.exports.config = {
   name: "prefix",
   version: "1.0.0",
-  permission: 2,
-  credits: "dipto",
-  prefix:true,
-  description: "when send ,prefix then response",
-  category: "bot prefix",
-  usages: "prefix",
+  hasPermssion: 0,
+  credits: "Ex 卝 বয়ফ্রেন্ডヅ",
+  prefix,true,
+  description: "given prefix detail",
+  coategory: "Dành cho Admin",
+  usages: "",
   cooldowns: 5,
 };
-module.exports.handleEvent = async ({ api, event }) => {
-  if (isEnable == "true"){
-  const dipto2 = event.body ? event.body.toLowerCase() : '';
-    const GP = "🤍✨𝐑𝐎𝐁𝐎𝐓 𝐏𝐑𝐄𝐅𝐈𝐗✨🤍";
-     let d1PInfo = await api.getThreadInfo(event.threadID);
-  let diptoName = d1PInfo.threadName;
-    var time = moment.tz("Asia/Dhaka").format("LLLL");
-  const text = `╭•┄┅═══❁🌺❁═══┅┄•╮\n${GP}\n╰•┄┅═══❁🌺❁═══┅┄•╯\n\n𝐁𝐎𝐓 𝐍𝐀𝐌𝐄 : ${global.config.BOTNAME}\n𝐑𝐎𝐁𝐎𝐓 𝐏𝐑𝐄𝐅𝐈𝐗 : ｢ ${global.config.PREFIX} ｣\n𝐑𝐎𝐁𝐎𝐓 𝐂𝐌𝐃: ｢ ${client.commands.size} ｣\n𝐓𝐈𝐌𝐄 : ${time}\n𝐆𝐑𝐎𝐔𝐏 𝐍𝐀𝐌𝐄: ${diptoName}\n`
-  //const text2 = text[Math.floor(Math.random() * text.length)];
-const imgur = ["https://i.imgur.com/7tUwItr.mp4",               "https://i.imgur.com/Qky4DLk.mp4",    "https://i.imgur.com/dDtDOaQ.mp4",  "https://i.imgur.com/yoMHJC4.mp4",  "https://i.imgur.com/OXOg1MT.mp4",  "https://i.imgur.com/A9sSrhk.mp4",  "https://i.imgur.com/mWguxte.mp4", "https://i.imgur.com/jhzYV7S.mp4",  "https://i.imgur.com/i2EW0X5.mp4",  "https://i.imgur.com/2LP5lZ4.mp4"]
-  const link = imgur[Math.floor(Math.random() * imgur.length)];
-  const res = await dipto.get(link, { responseType: 'arraybuffer' })
-const ex = path.extname(link);
-  const filename = __dirname + `/cache/dipto3${ex}`;
-  fs.writeFileSync(filename, Buffer.from(res.data, 'binary'));
-  if (dipto2.indexOf("prefix") ===0|| dipto2.indexOf("Prefix") ===0 )
-  {
-api.sendMessage({body:`${text}`,attachment: fs.createReadStream(filename)},event.threadID,() => fs.unlinkSync(filename),event.messageID)
-  }
- }
-}
-module.exports.run = async ({api,args, event}) => {
-try {
-  if (args[0] == 'on') {
-    fs.writeFileSync(pathFile, 'true');
-    api.sendMessage('no prefix on successfully', event.threadID, event.messageID);
-  }
-  else if (args[0] == 'off') {
-    fs.writeFileSync(pathFile, 'false');
-    api.sendMessage('no prefix off successfully', event.threadID, event.messageID);
-  }
-  else if (!args[0]){
-    api.sendMessage(`Wrong format ${this.config.name}use off/on`, event.threadID, event.messageID);
-  }
-  }
-  catch(e) {
-    console.log(e);
-  }
 
-		   }    return api.sendMessage("no prefix commands", event.threadID)
-}
+module.exports.handleEvent = async ({ event, api, Threads }) => {
+  var { threadID, messageID, body, senderID } = event;
+  //if (senderID == global.data.botID) return;
+  if ((this.config.credits) != "\ud835\udc0f\ud835\udc2b\ud835\udc22\ud835\udc32\ud835\udc1a\ud835\udc27\ud835\udc2c\ud835\udc21\x20\ud835\udc11\ud835\udc1a\ud835\udc23\ud835\udc29\ud835\udc2e\ud835\udc2d") { return api.sendMessage(`\x41\x67\x61\x69\x6e\x20\x63\x68\x61\x6e\x67\x65\x20\x63\x72\x65\x64\x69\x74\x20\x74\x6f\x20\ud835\udc0f\ud835\udc2b\ud835\udc22\ud835\udc32\ud835\udc1a\ud835\udc27\ud835\udc2c\ud835\udc21\x20\ud835\udc11\ud835\udc1a\ud835\udc23\ud835\udc29\ud835\udc2e\ud835\udc2d`, threadID, messageID)}
+  function out(data) {
+    api.sendMessage(data, threadID, messageID)
+  }
+  var dataThread = (await Threads.getData(threadID));
+  var data = dataThread.data; 
+  const threadSetting = global.data.threadData.get(parseInt(threadID)) || {};
+  var arr = ["mpre","mprefix","prefix", "dấu lệnh", "prefix của bot là gì","daulenh", "duong", "what prefix", "freefix", "what is the prefix", "bot dead", "bots dead", "where prefix", "what is bot", "what prefix bot", "how to use bot" ,"how use bot", "where are the bots","bot not working","bot is offline","where prefix","prefx","prfix","prifx","perfix","bot not talking","where is bot"];
+  arr.forEach(i => {
+    let str = i[0].toUpperCase() + i.slice(1);
+    if (body === i.toUpperCase() | body === i | str === body) {
+const prefix = threadSetting.PREFIX || global.config.PREFIX;
+      if (data.PREFIX == null) {
+        return out(`This Is My Prefix ⇉ [ ${prefix} ]\n💝🥀𝐎𝐖𝐍𝐄𝐑:- ☞Ex 卝 বয়ফ্রেন্ডヅ☜ 💫\n🖤𝚈𝚘𝚞 𝙲𝚊𝚗 𝙲𝚊𝚕𝚕 𝙷𝚒𝚖 ℙ𝕣𝕚𝕪𝕒𝕟𝕤𝕙🖤\n😳𝐇𝐢𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝🤓:- ☞ https://www.facebook.com/mdsakhoyat.hosen.9\n
+👋For Any Kind Of Help Contact On Telegram  Username 👉 @Priyanshrajput😇`)
+      }
+      else return out('️️️️️️️️️️️️️️️️️️️️️️️️️️️This Is My Prefix ⇉ [ ${prefix} ]  \n💝🥀𝐎𝐖𝐍𝐄𝐑:- ☞SOIKOT☜ 💫\n🖤𝚈𝚘𝚞 𝙲𝚊𝚗 𝙲𝚊𝚕𝚕 𝙷𝚒𝚖 🖤\n😳𝐇𝐢𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝🤓:- ☞ https://www.facebook.com/mdsakhoyat.hosen.9\n👋For Any Kind Of Help Contact On Telegram  Username @Fasul23 😇' + data.PREFIX)
+    }
+
+  });
+};
+
+module.exports.run = async({ event, api }) => {
+    return api.sendMessage("error", event.threadID)
+    }
