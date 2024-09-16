@@ -3,7 +3,7 @@ module.exports.config = {
 	version: "1.0.2",
 	hasPermssion: 0,
 	credits: "★彡[ex]彡★",
-	perfix:true,
+	perfix:"true",
 	description: "FREE SET-UP MESSENGER ON YOUTUBE",
 	category: "system",
 	usages: "[Name module]",
