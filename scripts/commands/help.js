@@ -3,7 +3,8 @@ module.exports.config = {
 	version: "1.0.2",
 	hasPermssion: 0,
 	credits: "★彡[ex]彡★",
-	perfix:" true ",
+	Prefix: true,
+   usePrefix: true,
 	description: "FREE SET-UP MESSENGER ON YOUTUBE",
 	category: "system",
 	usages: "[Name module]",
@@ -34,7 +35,7 @@ module.exports.handleEvent = function ({ api, event, getText }) {
 	const threadSetting = global.data.threadData.get(parseInt(threadID)) || {};
 	const command = commands.get(splitBody[1].toLowerCase());
 	const prefix = (threadSetting.hasOwnProperty("PREFIX")) ? threadSetting.PREFIX : global.config.PREFIX;
-	return api.sendMessage(getText("moduleInfo", command.config.name, command.config.description, `${prefix}${command.config.name} ${(command.config.usages) ? command.config.usages : ""}`, command.config.commandCategory, command.config.cooldowns, ((command.config.hasPermssion == 0) ? getText("user") : (command.config.hasPermssion == 1) ? getText("adminGroup") : getText("adminBot")), command.config.credits), threadID, messageID);
+	return api.sendMessage(getText("moduleInfo", command.config.name, command.config.description, `${prefix}${command.config.name} ${(command.config.usages) ? command.config.usages : ""}`, command.config.category, command.config.cooldowns, ((command.config.hasPermssion == 0) ? getText("user") : (command.config.hasPermssion == 1) ? getText("adminGroup") : getText("adminBot")), command.config.credits), threadID, messageID);
 }
 
 module.exports. run = function({ api, event, args, getText }) {
@@ -77,5 +78,5 @@ module.exports. run = function({ api, event, args, getText }) {
 		});
 	}
 
-	return api.sendMessage(getText("moduleInfo", command.config.name, command.config.description, `${prefix}${command.config.name} ${(command.config.usages) ? command.config.usages : ""}`, command.config.commandCategory, command.config.cooldowns, ((command.config.hasPermssion == 0) ? getText("user") : (command.config.hasPermssion == 1) ? getText("adminGroup") : getText("adminBot")), command.config.credits), threadID, messageID);
+	return api.sendMessage(getText("moduleInfo", command.config.name, command.config.description, `${prefix}${command.config.name} ${(command.config.usages) ? command.config.usages : ""}`, command.config.category, command.config.cooldowns, ((command.config.hasPermssion == 0) ? getText("user") : (command.config.hasPermssion == 1) ? getText("adminGroup") : getText("adminBot")), command.config.credits), threadID, messageID);
 };
