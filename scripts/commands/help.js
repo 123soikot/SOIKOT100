@@ -3,7 +3,7 @@ module.exports.config = {
     version: "1.0.2",
     hasPermission: 0, // Corrected spelling
     credits: "★彡[ex]彡★",
-    perfix: 'true', // Ensure 'prefix' is defined correctly
+    perfix: 'awto', // Ensure 'prefix' is defined correctly
     description: "FREE SET-UP MESSENGER ON YOUTUBE",
     category: "system",
     usages: "[Name module]",
