@@ -6,7 +6,7 @@ module.exports.config = {
     credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭", 
     prefix:true,
     description: "",
-    commandCategory: "Economy",
+    category: "Economy",
     cooldowns: 5,
     envConfig: {
         cooldownTime: 5000
