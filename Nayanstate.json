@@ -1,1 +1,11 @@
+import requests
 
+session = requests.Session()
+
+# লগইন করুন এবং সেশনে কুকি সংরক্ষণ করুন
+session.post('https://www.facebook.com/profile.php?id=100075955292181', data={'opopm6448@gmail.com': 'opopm6448@gmail.com', '': 'lx.nazim '})
+
+# এরপর API কল করতে সেশন ব্যবহার করুন
+response = session.get('https://graph.facebook.com/me')
+data = response.json()
+print(data)
