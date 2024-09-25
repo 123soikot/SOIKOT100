@@ -1,11 +1,128 @@
-import requests
-
-session = requests.Session()
-
-# লগইন করুন এবং সেশনে কুকি সংরক্ষণ করুন
-session.post('https://www.facebook.com/profile.php?id=100075955292181', data={'opopm6448@gmail.com': 'opopm6448@gmail.com', '': 'lx.nazim '})
-
-# এরপর API কল করতে সেশন ব্যবহার করুন
-response = session.get('https://graph.facebook.com/me')
-data = response.json()
-print(data)
+[
+    {
+        "key": "dbln",
+        "value": "%7B%22100075955292181%22%3A%22HDZSlZM8%22%2C%22100092529759335%22%3A%22y1LAIYoV%22%7D",
+        "domain": "facebook.com",
+        "path": "/login/device-based/",
+        "hostOnly": false,
+        "creation": "2024-09-25T11:02:57.427Z",
+        "lastAccessed": "2024-09-25T11:02:57.428Z"
+    },
+    {
+        "key": "datr",
+        "value": "zHbMZgijx_05kr03yYhIZp0s",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-09-25T11:02:57.428Z",
+        "lastAccessed": "2024-09-25T11:02:57.428Z"
+    },
+    {
+        "key": "sb",
+        "value": "zHbMZsePEWiVbc6JEZFDNPMO",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-09-25T11:02:57.428Z",
+        "lastAccessed": "2024-09-25T11:02:57.428Z"
+    },
+    {
+        "key": "ps_l",
+        "value": "1",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-09-25T11:02:57.428Z",
+        "lastAccessed": "2024-09-25T11:02:57.428Z"
+    },
+    {
+        "key": "ps_n",
+        "value": "1",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-09-25T11:02:57.428Z",
+        "lastAccessed": "2024-09-25T11:02:57.428Z"
+    },
+    {
+        "key": "dpr",
+        "value": "1.5303868055343628",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-09-25T11:02:57.428Z",
+        "lastAccessed": "2024-09-25T11:02:57.428Z"
+    },
+    {
+        "key": "locale",
+        "value": "en_GB",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-09-25T11:02:57.428Z",
+        "lastAccessed": "2024-09-25T11:02:57.428Z"
+    },
+    {
+        "key": "wd",
+        "value": "470x892",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-09-25T11:02:57.428Z",
+        "lastAccessed": "2024-09-25T11:02:57.428Z"
+    },
+    {
+        "key": "c_user",
+        "value": "100075955292181",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-09-25T11:02:57.428Z",
+        "lastAccessed": "2024-09-25T11:02:57.428Z"
+    },
+    {
+        "key": "fr",
+        "value": "0M9tzim3ZE1EqsXMI.AWXza9DiaRcP-MoXUmYhaCc-cng.BmzHbM..AAA.0.0.Bm8XmA.AWXjhQ1GQ-8",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-09-25T11:02:57.428Z",
+        "lastAccessed": "2024-09-25T11:02:57.428Z"
+    },
+    {
+        "key": "xs",
+        "value": "4%3Aa_W6ps9SNOdjDg%3A2%3A1727101313%3A-1%3A5230",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-09-25T11:02:57.428Z",
+        "lastAccessed": "2024-09-25T11:02:57.428Z"
+    },
+    {
+        "key": "fbl_st",
+        "value": "101522764%3BT%3A28787702",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-09-25T11:02:57.428Z",
+        "lastAccessed": "2024-09-25T11:02:57.428Z"
+    },
+    {
+        "key": "wl_cbv",
+        "value": "v2%3Bclient_version%3A2630%3Btimestamp%3A1727262173",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-09-25T11:02:57.428Z",
+        "lastAccessed": "2024-09-25T11:02:57.428Z"
+    },
+    {
+        "key": "vpd",
+        "value": "v1%3B758x400x1.5303868055343628",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-09-25T11:02:57.428Z",
+        "lastAccessed": "2024-09-25T11:02:57.428Z"
+    }
+      ]
